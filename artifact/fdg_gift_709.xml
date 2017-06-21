@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PdfInfoML>
+    <form id="IRS709" isMultiCopy="true" bind="/Return/ReturnData/IRS709">
+        <description/>
+    </form>
+    <common>
+    	<field id="AmendNotes" type="AmendNotesType">
+    		<region id="AmendNotes[0]" page="1"/>
+    	</field>
+    	<field id="FiledNotes" type="FiledNotesType">
+    		<region id="FiledNotes[0]" page="1"/>
+    	</field>
+    	<field id="DonorDeceasedLabel" type="DonorDeceasedLabelType">
+    		<region id="DonorDeceasedLabel[0]" page="1"/>
+    	</field>
+    	<field id="Nonresident" type="NonresidentType">
+    		<region id="Nonresident[0]" page="1"/>
+    	</field>
+    	<field id="InterestLabel" type="InterestLabelType">
+    		<region id="InterestLabel[0]" page="1"/>
+    	</field>
+    	<field id="Interest" type="InterestType">
+    		<region id="Interest[0]" page="1"/>
+    	</field>
+    	<field id="LatePymtLabel" type="LatePymtLabelType">
+    		<region id="LatePymtLabel[0]" page="1"/>
+    	</field>
+    	<field id="LatePymt" type="LatePymtType">
+    		<region id="LatePymt[0]" page="1"/>
+    	</field>
+    	<field id="LateFileLabel" type="LateFileLabelType">
+    		<region id="LateFileLabel[0]" page="1"/>
+    	</field>
+    	<field id="LateFile" type="LateFileType">
+    		<region id="LateFile[0]" page="1"/>
+    	</field>
+    	<field id="GiftSplittingBoxCheck" type="GiftSplittingBoxCheckType">
+    		<region id="GiftSplittingBoxCheck[0]" page="1"/>
+    	</field>
+        <field id="DonorAddressLine1" type="StreetAddressType" bind="USAddress/AddressLine1Txt">
+            <region id="ADDR[0]" page="1"/>
+        </field>
+        <field id="DonorAddressCSZ" type="IRS709DonorAddressCSZType">
+            <region id="CITY[0]" page="1"/>
+        </field>
+        <field id="FirmAddress" type="FirmAddressType">
+            <region id="PADDR[0]" page="1"/>
+        </field>
+        <field id="LegalResidenceDesc" type="TextType" bind="LegalResidenceDesc">
+            <description>Legal residence description</description>
+            <region id="LEGRES[0]" page="1"/>
+        </field>
+        <field id="CitizenshipDesc" type="TextType" bind="CitizenshipDesc">
+            <description>Citizenship description</description>
+            <region id="CITIZEN[0]" page="1"/>
+        </field>
+        <field id="DonorDiedDuringTheYear" type="BooleanType" bind="DonorDiedDuringTheYear">
+            <description>Donor died during the year</description>
+            <region id="L8BOX[0]" page="1"/>
+        </field>
+        <field id="DateDonorDiedMMDD" type="DateTypeMMDD" bind="DateDonorDied">
+            <description>Date donor died MM/DD</description>
+            <region id="L8DATE[0]" page="1"/>
+        </field>
+        <field id="DateDonorDiedYYYY" type="DateTypeYYYY" bind="DateDonorDied">
+            <description>Date donor died YYYY</description>
+            <region id="L8YEAR[0]" page="1"/>
+        </field>
+        <field id="ExtensionFiled" type="BooleanType" bind="ExtensionFiled">
+            <description>Extension Filed</description>
+            <region id="L9BOX[0]" page="1"/>
+        </field>
+        <field id="TotalNumberOfDonees" type="USAmountNNType" bind="TotalNumberOfDonees">
+            <description>Total number of donees</description>
+            <region id="P1L10[0]" page="1"/>
+        </field>
+        <field id="EverFileGiftReturnForAnotherYear" type="BooleanType" bind="EverFileGiftReturnForAnotherYear">
+            <description>Ever file gift return for another year</description>
+            <region id="L11ABXY[0]" page="1"/>
+            <region id="L11ABXN[0]" page="1"/>
+        </field>
+        <field id="AddressChangeInd" type="BooleanType" bind="AddressChangeInd">
+            <description>Indicates an address change</description>
+            <region id="L11BBXY[0]" page="1"/>
+            <region id="L11BBXN[0]" page="1"/>
+        </field>
+        <field id="GiftsBySpouseToThirdParty" type="BooleanType" bind="GiftsBySpouseToThirdParty">
+            <description>Consent to gift splitting</description>
+            <region id="L12BXY[0]" page="1"/>
+            <region id="L12BXN[0]" page="1"/>
+        </field>
+        <field id="NameConsentingSpouse" type="TextType" bind="NameConsentingSpouse">
+            <description>Name of Consenting Spouse</description>
+            <region id="P1L13[0]" page="1"/>
+        </field>
+        <field id="SSNConsentingSpouse" type="SSNType" bind="SSNConsentingSpouse">
+            <description>Social security number of consenting spouse</description>
+            <region id="P1L14[0]" page="1"/>
+        </field>
+        <field id="MarriedPartOfYearInd" type="BooleanType" bind="MarriedPartOfYearInd">
+            <description>Married part of year</description>
+            <region id="L16BX1[0]" page="1"/>
+        </field>
+        <field id="DivorcedDuringYearInd" type="BooleanType" bind="DivorcedDuringYearInd">
+            <description>Divorced during year</description>
+            <region id="L16BX2[0]" page="1"/>
+        </field>
+        <field id="MarriedToAnotherDuringYear" type="BooleanType" bind="MarriedToAnotherDuringYear">
+            <description>Married to another during year</description>
+            <region id="L15BXY[0]" page="1"/>
+            <region id="L15BXN[0]" page="1"/>
+        </field>
+        <field id="WidowedOrDeceasedDuringYrInd" type="BooleanType" bind="WidowedOrDeceasedDuringYrInd">
+            <description>Widowed or deceased during year</description>
+            <region id="L16BX3[0]" page="1"/>
+        </field>
+        <field id="SpouseReturnFiledInd" type="BooleanType" bind="SpouseReturnFiledInd">
+            <description>Spouse Gift Return FIled This Year</description>
+            <region id="L17BXY[0]" page="1"/>
+            <region id="L17BXN[0]" page="1"/>
+        </field>
+        <field id="SpouseConsentDate" type="DateType" bind="SpouseConsentDate">
+            <description>Date of consenting spouse's signature</description>
+            <region id="SPSIGDAT[0]" page="1"/>
+        </field>
+        <field id="DSUEAmountApplied" type="BooleanType" bind="DSUEAmountApplied">
+            <description>DSUE amount has been applied to this or a previous return</description>
+            <region id="DSUEXY[0]" page="1"/>
+            <region id="DSUEXN[0]" page="1"/>
+        </field>
+        <field id="CurrentYearTaxableGifts" type="USAmountNNTypeSuppressDot" bind="CurrentYearTaxableGifts">
+            <description>Current year taxable gifts</description>
+            <region id="L1[0]" page="1"/>
+        </field>
+        <field id="PriorYearTaxableGifts" type="USAmountNNTypeSuppressDot" bind="PriorYearTaxableGifts">
+            <description>Prior year taxable gifts</description>
+            <region id="L2[0]" page="1"/>
+        </field>
+        <field id="TotalTaxableGifts" type="USAmountNNTypeSuppressDot" bind="TotalTaxableGifts">
+            <description>Total taxable gifts</description>
+            <region id="L3[0]" page="1"/>
+        </field>
+        <field id="TotalTaxBeforeCredits" type="USAmountNNTypeSuppressDot" bind="TotalTaxBeforeCredits">
+            <description>Total tax</description>
+            <region id="L4[0]" page="1"/>
+        </field>
+        <field id="PriorYearTax" type="USAmountNNTypeSuppressDot" bind="PriorYearTax">
+            <description>Prior year tax</description>
+            <region id="L5[0]" page="1"/>
+        </field>
+        <field id="CurrentYearNetTax" type="USAmountNNTypeSuppressDot" bind="CurrentYearNetTax">
+            <description>Current year net tax</description>
+            <region id="L6[0]" page="1"/>
+        </field>
+        <field id="TotalCredit" type="USAmountNNTypeSuppressDot" bind="TotalCredit">
+            <description>Total credit</description>
+            <region id="UCREDIT[0]" page="1"/>
+        </field>
+        <field id="PriorYearCredit" type="USAmountNNTypeSuppressDot" bind="PriorYearCredit">
+            <description>Prior year credit</description>
+            <region id="L8[0]" page="1"/>
+        </field>
+        <field id="CurrentYearCredit" type="USAmountNNTypeSuppressDot" bind="CurrentYearCredit">
+            <description>Current year credit</description>
+            <region id="L9[0]" page="1"/>
+        </field>
+        <field id="SpecialBicentennialCredit" type="USAmountNNTypeSuppressDot" bind="SpecialBicentennialCredit">
+            <description>Twenty percent of specific exemption for gifts made after September 8, 1976, and before January 1, 1977</description>
+            <region id="L10[0]" page="1"/>
+        </field>
+        <field id="CurrentYearNetCredit" type="USAmountNNTypeSuppressDot" bind="CurrentYearNetCredit">
+            <description>Current year net credit</description>
+            <region id="L11[0]" page="1"/>
+        </field>
+        <field id="CurrentYearAllowableCredit" type="USAmountNNTypeSuppressDot" bind="CurrentYearAllowableCredit">
+            <description>Current year allowable credit</description>
+            <region id="L12[0]" page="1"/>
+        </field>
+        <field id="ForeignGiftTaxCredit" type="USAmountNNTypeSuppressDot" bind="ForeignGiftTaxCredit">
+            <description>Foreign gift tax credit</description>
+            <region id="L13[0]" page="1"/>
+        </field>
+        <field id="TotalCurrentYearTaxCredit" type="USAmountNNTypeSuppressDot" bind="TotalCurrentYearTaxCredit">
+            <description>Total current year tax credit</description>
+            <region id="L14[0]" page="1"/>
+        </field>
+        <field id="NetCurrentYearGiftTax" type="USAmountNNTypeSuppressDot" bind="NetCurrentYearGiftTax">
+            <description>Net current year gift tax</description>
+            <region id="L15[0]" page="1"/>
+        </field>
+        <field id="GSTTax" type="USAmountNNTypeSuppressDot" bind="GSTTax">
+            <description>Generation-skipping tranfer taxes</description>
+            <region id="L16[0]" page="1"/>
+        </field>
+        <field id="TotalTax" type="USAmountNNTypeSuppressDot" bind="TotalTax">
+            <description>Total tax</description>
+            <region id="L17[0]" page="1"/>
+        </field>
+        <field id="PaidWitheExtension" type="USAmountNNTypeSuppressDot" bind="PaidWitheExtension">
+            <description>Amount prepaid with extension of time to file</description>
+            <region id="L18[0]" page="1"/>
+        </field>
+        <field id="BalanceDue" type="USAmountNNTypeSuppressDot" bind="BalanceDue">
+            <description>Balance due</description>
+            <region id="L19[0]" page="1"/>
+        </field>
+        <field id="Refund" type="USAmountNNTypeSuppressDot" bind="Refund">
+            <description>Refund</description>
+            <region id="L20[0]" page="1"/>
+        </field>
+        <field id="IRS709ScheduleA/ValuationDiscountInd" type="BooleanType" bind="IRS709ScheduleA/ValuationDiscountInd">
+            <description>Does the value of any item reflect any valuation discount?</description>
+            <region id="BOXY[0]" page="2"/>
+            <region id="BOXN[0]" page="2"/>
+        </field>
+        <field id="IRS709ScheduleA/FiveTwentyNineC2BElection" type="BooleanType" bind="IRS709ScheduleA/FiveTwentyNineC2BElection">
+            <description>Elect IRC 529(c)(2)(B) 5 year allocation</description>
+            <region id="BXA[0]" page="2"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalGiftsSubjectOnlyToGiftTax" type="USAmountNNType" bind="IRS709ScheduleA/TotalGiftsSubjectOnlyToGiftTax">
+            <description/>
+            <region id="P1TOTAL[0]" page="2"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalDirectSkipGifts" type="USAmountNNType" bind="IRS709ScheduleA/TotalDirectSkipGifts">
+            <description/>
+            <region id="P2TOTAL[0]" page="2"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalIndirectSkipGifts" type="USAmountNNType" bind="IRS709ScheduleA/TotalIndirectSkipGifts">
+            <description/>
+            <region id="P3TOTAL[0]" page="2"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalValueOfGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/TotalValueOfGifts">
+            <description/>
+            <region id="P3L1[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalAnnualExclusions" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/TotalAnnualExclusions">
+            <description/>
+            <region id="P3L6[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/NetValueOfGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/NetValueOfGifts">
+            <description/>
+            <region id="P3L7[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/MaritalDeduction/ExclusionsAttributableToSpouseGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/MaritalDeduction/ExclusionsAttributableToSpouseGifts">
+            <description/>
+            <region id="P3L9[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/MaritalDeduction/GiftsOfInterestsToSpouse" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/MaritalDeduction/GiftsOfInterestsToSpouse">
+            <description/>
+            <region id="P3L8[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/MaritalDeduction/CalculatedAmount" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/MaritalDeduction/CalculatedAmount">
+            <description/>
+            <region id="P3L10[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/MaritalDeduction/NoQTIPForAnnuities" type="BooleanType" bind="IRS709ScheduleA/MaritalDeduction/NoQTIPForAnnuities">
+            <description/>
+            <region id="L17BOX[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/CharitableDeductionLessExclusions" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/CharitableDeductionLessExclusions">
+            <description/>
+            <region id="P3L11[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/TaxableGifts">
+            <description/>
+            <region id="P3L15[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/GSTTaxes" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/GSTTaxes">
+            <description/>
+            <region id="P3L14[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/NetGiftsLessDeductions" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/NetGiftsLessDeductions">
+            <description/>
+            <region id="P3L13[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleA/TotalDeductions" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleA/TotalDeductions">
+            <description/>
+            <region id="P3L12[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleB/TotalUnifiedCredit" type="USAmountNNType" bind="IRS709ScheduleB/TotalUnifiedCredit">
+            <description/>
+            <region id="L1C[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleB/TotalExemption" type="USAmountNNType" bind="IRS709ScheduleB/TotalExemption">
+            <description/>
+            <region id="L1D[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleB/SubTotalTaxableGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleB/SubTotalTaxableGifts">
+            <description/>
+            <region id="L1E[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleB/ExemptionOver30K" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleB/ExemptionOver30K">
+            <description/>
+            <region id="SCHBL2[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleB/TotalTaxableGifts" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleB/TotalTaxableGifts">
+            <description/>
+            <region id="SCHBL3[0]" page="3"/>
+        </field>
+        <field id="IRS709ScheduleC/TotalDSUEAmountsAppliedByDonor" type="USAmountNNType" bind="IRS709ScheduleC/TotalDSUEAmountsAppliedByDonor">
+            <description/>
+            <region id="TOTAL[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DonorsBasicExclusion" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleC/DonorsBasicExclusion">
+            <description/>
+            <region id="EXCLAMT[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/TotalDSUEAmountsFromPart1and2" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleC/TotalDSUEAmountsFromPart1and2">
+            <description/>
+            <region id="ETOTAL[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DonorsTotalExclusion" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleC/DonorsTotalExclusion">
+            <description/>
+            <region id="SUM[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/ApplicableCredit" type="USAmountNNTypeSuppressDot" bind="IRS709ScheduleC/ApplicableCredit">
+            <description/>
+            <region id="MAXCR[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleD/Making2652a3Election" type="BooleanType" bind="IRS709ScheduleD/Making2652a3Election">
+            <description/>
+            <region id="PT2BOX[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/MaximumAllowableExemption" type="USAmountNNType" bind="IRS709ScheduleD/MaximumAllowableExemption">
+            <description/>
+            <region id="L21[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/ExemptionAvailThisReturn" type="USAmountNNType" bind="IRS709ScheduleD/ExemptionAvailThisReturn">
+            <description/>
+            <region id="L23[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/ExemptionUsedInPriorPeriods" type="USAmountNNType" bind="IRS709ScheduleD/ExemptionUsedInPriorPeriods">
+            <description/>
+            <region id="L22[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/ExemptionClaimedThisReturn" type="USAmountNNType" bind="IRS709ScheduleD/ExemptionClaimedThisReturn">
+            <description/>
+            <region id="L24[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/TotalGSTTax" type="USAmountNNType" bind="IRS709ScheduleD/TotalGSTTax">
+            <description/>
+            <region id="PT3TTL2[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/TotalExemptionClaimed" type="USAmountNNType" bind="IRS709ScheduleD/TotalExemptionClaimed">
+            <description/>
+            <region id="PT3TTL1[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/ExemptionAvailForFutureTransfers" type="USAmountNNType" bind="IRS709ScheduleD/ExemptionAvailForFutureTransfers">
+            <description/>
+            <region id="L27[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/TotalExemptionUsedOnThisReturn" type="USAmountNNType" bind="IRS709ScheduleD/TotalExemptionUsedOnThisReturn">
+            <description/>
+            <region id="L26[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/AutoAllocOfExemptionAmt" type="USAmountNNType" bind="IRS709ScheduleD/AutoAllocOfExemptionAmt">
+            <description/>
+            <region id="ALLOCXMP[0]" page="5"/>
+        </field>
+        <field id="IRS709ScheduleD/ExemptionAllocatedToTransfers" type="USAmountNNType" bind="IRS709ScheduleD/ExemptionAllocatedToTransfers">
+            <description/>
+            <region id="L25[0]" page="5"/>
+        </field>
+        <field id="/Return/ReturnHeader/PaidPreparerInformationGrp/SignatureDt" type="DateType" bind="/Return/ReturnHeader/PaidPreparerInformationGrp/SignatureDt">
+            <description>Date Signed</description>
+            <region id="PREPSDAT[0]" page="1"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/NmOfDeceasedSpouse" type="PersonNameType" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/NmOfDeceasedSpouse">
+            <description/>
+            <region id="DNAME1[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DateOfDeath" type="DateType" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DateOfDeath">
+            <description/>
+            <region id="DDOD1[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/PortabilityElection" type="BooleanType" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/PortabilityElection">
+            <description/>
+            <region id="DPORT1XY[0]" page="4"/>
+            <region id="DPORT1XN[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DSUEFromSpouse" type="USAmountNNType" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DSUEFromSpouse">
+            <description/>
+            <region id="RECD1[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DSUEAmountApplied" type="USAmountNNType" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DSUEAmountApplied">
+            <description/>
+            <region id="APPLIED1[0]" page="4"/>
+        </field>
+        <field id="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DateOfGift" type="DateTypeMMDDYY" bind="IRS709ScheduleC/DSUEReceivedFromLastSpouse/DateOfGift">
+            <description/>
+            <region id="GIFTDT1[0]" page="4"/>
+        </field>
+        <field id="DateDeceased" type="DateType" bind="DateDeceased">
+            <description/>
+            <region id="L16DATE[0]" page="1"/>
+        </field>
+        <field id="FirstNameAndInital" type="PersonFirstNameType" bind="FirstNameAndInital">
+            <description/>
+            <region id="FNAME[0]" page="1"/>
+        </field>
+        <field id="LastName" type="PersonLastNameType" bind="LastName">
+            <description/>
+            <region id="LNAME[0]" page="1"/>
+        </field>
+        <field id="SocialSecurityNumber" type="SSNType" bind="SocialSecurityNumber">
+            <description/>
+            <region id="SSN[0]" page="1"/>
+        </field>
+        <field id="DiscussWithPaidPreparerInd" type="BooleanType" bind="DiscussWithPaidPreparerInd">
+            <description/>
+            <region id="DISCY[0]" page="1"/>
+            <region id="DISCN[0]" page="1"/>
+        </field>
+        <field id="PreparerPersonNm" type="PersonNameType" bind="PreparerPersonNm">
+            <description>Preparer Person Name</description>
+            <region id="PREPNAME[0]" page="1"/>
+        </field>
+        <field id="SelfEmployedInd" type="BooleanType" bind="SelfEmployedInd">
+            <description>Self Employed</description>
+            <region id="SELFEMP[0]" page="1"/>
+        </field>
+        <field id="PreparerPTIN" type="StringType" bind="PreparerPTIN">
+            <description>Preparer PTIN</description>
+            <region id="PTIN[0]" page="1"/>
+        </field>
+        <field id="PreparerFirmName" type="BusinessNameLine1Type" bind="PreparerFirmName">
+            <description>Preparer Firm Name</description>
+            <region id="FIRMNAME[0]" page="1"/>
+        </field>
+        <field id="PreparerFirmEIN" type="EINType" bind="PreparerFirmEIN">
+            <description>Preparer Firm ID Number</description>
+            <region id="PEIN[0]" page="1"/>
+        </field>
+        <field id="PreparerPhoneNum" type="PhoneNumberType" bind="PreparerPhoneNum">
+            <description>Preparer Phone</description>
+            <region id="PHONE[0]" page="1"/>
+        </field>
+        <field id="USAddress/AddressLine1Txt" type="StreetAddressType" bind="USAddress/AddressLine1Txt">
+            <description/>
+            <region id="ADDR[0]" page="1"/>
+        </field>
+        <field id="PreparerSignature" type="StringType" bind="PreparerSignature">
+            <description/>
+            <region id="PREPSIGN[0]" page="1"/>
+        </field>
+        <field id="VendorCode" type="TextType">
+            <region id="VendorCode[0]" page="1"/>
+            <region id="VendorCode[0]" page="2"/>
+            <region id="VendorCode[0]" page="3"/>
+            <region id="VendorCode[0]" page="4"/>
+            <region id="VendorCode[0]" page="5"/>
+        </field>
+        <field id="FpsRevDate" type="TextType">
+            <region id="FpsRevDate[0]" page="1"/>
+            <region id="FpsRevDate[0]" page="2"/>
+            <region id="FpsRevDate[0]" page="3"/>
+            <region id="FpsRevDate[0]" page="4"/>
+            <region id="FpsRevDate[0]" page="5"/>
+        </field>
+        <table id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts" bind="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="TPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="TPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="TPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="TPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="TPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/TaxpayerGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="TPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts" bind="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="SPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="SPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="SPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="SPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="SPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/GiftsSubjectoOnlyToGiftTax/SpouseGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="SPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts" bind="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="P2TPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="P2TPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="P2TPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="P2TPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="P2TPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/TaxpayerGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="P2TPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts" bind="IRS709ScheduleA/DirectSkipGifts/SpouseGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="P2SPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="P2SPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="P2SPPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="P2SPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="P2SPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="P2SPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/DirectSkipGifts/SpouseGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="P2SPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts" bind="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="P3TPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="P3TPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="P3TPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="P3TPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="P3TPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/TaxpayerGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="P3TPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts" bind="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/PersonNm" type="PersonNameType" bind="PersonNm">
+                    <description/>
+                    <region id="P3SPGiftTaxDoneeName[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/DonorsAdjustedBasis" type="USAmountNNType" bind="DonorsAdjustedBasis">
+                    <description/>
+                    <region id="P3SPGiftTaxBasis[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/DateOfGift" type="DateType" bind="DateOfGift">
+                    <description/>
+                    <region id="P3SPGiftTaxDate[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/ValueAtDateOfGift" type="USAmountNNType" bind="ValueAtDateOfGift">
+                    <description/>
+                    <region id="P3SPGiftTaxValue[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/SplitGiftValue" type="USAmountNNType" bind="SplitGiftValue">
+                    <description/>
+                    <region id="P3SPGiftTaxSplit[0]" page="2"/>
+                </field>
+                <field id="IRS709ScheduleA/IndirectSkipGifts/SpouseGifts/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="P3SPGiftTaxNet[0]" page="2"/>
+                </field>
+            </row>
+        </table> 
+        <table id="IRS709ScheduleA/SortedGiftsToSpouse/ItemGroup" bind="IRS709ScheduleA/SortedGiftsToSpouse/ItemGroup">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/SortedGiftsToSpouse/ItemGroup/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="P3L8TXT[0]" page="3"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/SortedCharitableDeduction/ItemGroup" bind="IRS709ScheduleA/SortedCharitableDeduction/ItemGroup">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/SortedCharitableDeduction/ItemGroup/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="P3L11TXT[0]" page="3"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleA/SortedQTIPElection/ItemGroup" bind="IRS709ScheduleA/SortedQTIPElection/ItemGroup">
+            <row bind="[1]">
+                <field id="IRS709ScheduleA/SortedQTIPElection/ItemGroup/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="L17TXT[0]" page="3"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleB/GiftsFromPriorPeriods" bind="IRS709ScheduleB/GiftsFromPriorPeriods">
+            <row bind="[1]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[0]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[0]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[0]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[0]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[0]" page="3"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[1]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[1]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[1]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[1]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[1]" page="3"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[2]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[2]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[2]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[2]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[2]" page="3"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[3]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[3]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[3]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[3]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[3]" page="3"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[4]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[4]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[4]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[4]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[4]" page="3"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[5]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[5]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[5]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[5]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[5]" page="3"/>
+                </field>
+            </row>
+            <row bind="[7]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[6]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[6]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[6]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[6]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[6]" page="3"/>
+                </field>
+            </row>
+            <row bind="[8]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[7]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[7]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[7]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[7]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[7]" page="3"/>
+                </field>
+            </row>
+            <row bind="[9]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[8]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[8]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[8]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[8]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[8]" page="3"/>
+                </field>
+            </row>
+            <row bind="[10]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[9]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[9]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[9]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[9]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[9]" page="3"/>
+                </field>
+            </row>
+            <row bind="[11]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[10]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[10]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[10]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[10]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[10]" page="3"/>
+                </field>
+            </row>
+            <row bind="[12]">
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/CalendarYrOrQtr" type="TextType" bind="CalendarYrOrQtr">
+                    <description/>
+                    <region id="A[11]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/InternalRevenueOffice" type="IRSServiceCenterType" bind="InternalRevenueOffice">
+                    <description/>
+                    <region id="B[11]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/UnifiedCredit" type="USAmountNNType" bind="UnifiedCredit">
+                    <description/>
+                    <region id="C[11]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/Exemption" type="USAmountNNType" bind="Exemption">
+                    <description/>
+                    <region id="D[11]" page="3"/>
+                </field>
+                <field id="IRS709ScheduleB/GiftsFromPriorPeriods/TaxableGifts" type="USAmountNNTypeSuppressDot" bind="TaxableGifts">
+                    <description/>
+                    <region id="E[11]" page="3"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses" bind="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses">
+            <row bind="[1]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[0]" page="4"/>
+                    <region id="DPORT2XN_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[0]" page="4"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[1]" page="4"/>
+                    <region id="DPORT2XN_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[1]" page="4"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[2]" page="4"/>
+                    <region id="DPORT2XN_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[2]" page="4"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[3]" page="4"/>
+                    <region id="DPORT2XN_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[3]" page="4"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[4]" page="4"/>
+                    <region id="DPORT2XN_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[4]" page="4"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/NmOfDeceasedSpouse" type="PersonNameType" bind="NmOfDeceasedSpouse">
+                    <description/>
+                    <region id="DNAME2_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfDeath" type="DateType" bind="DateOfDeath">
+                    <description/>
+                    <region id="DDOD2_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/PortabilityElection" type="BooleanType" bind="PortabilityElection">
+                    <description/>
+                    <region id="DPORT2XY_1_[5]" page="4"/>
+                    <region id="DPORT2XN_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEFromSpouse" type="USAmountNNType" bind="DSUEFromSpouse">
+                    <description/>
+                    <region id="RECD2_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DSUEAmountApplied" type="USAmountNNType" bind="DSUEAmountApplied">
+                    <description/>
+                    <region id="APPLIED2_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleC/DSUEReceivedFromPreDeceasedSpouses/DateOfGift" type="DateTypeYYYY" bind="DateOfGift">
+                    <description/>
+                    <region id="GIFTDT2_1_[5]" page="4"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleD/Sorted2652a3Election/ItemGroup" bind="IRS709ScheduleD/Sorted2652a3Election/ItemGroup">
+            <row bind="[1]">
+                <field id="IRS709ScheduleD/Sorted2652a3Election/ItemGroup/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT2TEXT[0]" page="5"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer" bind="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer">
+            <row bind="[1]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[0]" page="4"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[1]" page="4"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[2]" page="4"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[3]" page="4"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[4]" page="4"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1A_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1B_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1E_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1F_1_[5]" page="4"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse" bind="IRS709ScheduleD/GenerationSkippingTransfers/Spouse">
+            <row bind="[1]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[0]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[0]" page="4"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[1]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[1]" page="4"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[2]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[2]" page="4"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[3]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[3]" page="4"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[4]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[4]" page="4"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT1SC_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/Value" type="USAmountNNType" bind="Value">
+                    <description/>
+                    <region id="PT1SD_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NontaxablePortion" type="USAmountNNType" bind="NontaxablePortion">
+                    <description/>
+                    <region id="PT1SE_1_[5]" page="4"/>
+                </field>
+                <field id="IRS709ScheduleD/GenerationSkippingTransfers/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT1SF_1_[5]" page="4"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleD/TaxComputation/Taxpayer" bind="IRS709ScheduleD/TaxComputation/Taxpayer">
+            <row bind="[1]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[0]" page="5"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[1]" page="5"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[2]" page="5"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[3]" page="5"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[4]" page="5"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3A_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3B_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3C_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3D_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3E_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3G_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Taxpayer/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3H_1_[5]" page="5"/>
+                </field>
+            </row>
+        </table>
+        <table id="IRS709ScheduleD/TaxComputation/Spouse" bind="IRS709ScheduleD/TaxComputation/Spouse">
+            <row bind="[1]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[0]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[0]" page="5"/>
+                </field>
+            </row>
+            <row bind="[2]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[1]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[1]" page="5"/>
+                </field>
+            </row>
+            <row bind="[3]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[2]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[2]" page="5"/>
+                </field>
+            </row>
+            <row bind="[4]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[3]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[3]" page="5"/>
+                </field>
+            </row>
+            <row bind="[5]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[4]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[4]" page="5"/>
+                </field>
+            </row>
+            <row bind="[6]">
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ItemNumber" type="AlphaNumericType" bind="ItemNumber">
+                    <description/>
+                    <region id="PT3SA_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/NetTransfer" type="USAmountNNType" bind="NetTransfer">
+                    <description/>
+                    <region id="PT3SB_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTExemptionAllocated" type="USAmountNNType" bind="GSTExemptionAllocated">
+                    <description/>
+                    <region id="PT3SC_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ExclusionRatio" type="RatioType" bind="ExclusionRatio">
+                    <description/>
+                    <region id="PT3SD_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/InclusionRatio" type="RatioType" bind="InclusionRatio">
+                    <description/>
+                    <region id="PT3SE_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/ApplicableRate" type="RatioType" bind="ApplicableRate">
+                    <description/>
+                    <region id="PT3SG_1_[5]" page="5"/>
+                </field>
+                <field id="IRS709ScheduleD/TaxComputation/Spouse/GSTTax" type="USAmountNNType" bind="GSTTax">
+                    <description/>
+                    <region id="PT3SH_1_[5]" page="5"/>
+                </field>
+            </row>
+        </table>
+    </common>
+</PdfInfoML>

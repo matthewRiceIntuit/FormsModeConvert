@@ -1,0 +1,2002 @@
+<Return>
+    <ReturnPP>
+        <Taxpayer>
+            <ContactInformation>
+                <FirstName>Form 709</FirstName>
+                <LastName>Every line filled in</LastName>
+                <SocialSecurityNumber>456856321</SocialSecurityNumber>
+                <TelephoneNumber>
+                    <Mobile>6056304852</Mobile>
+                </TelephoneNumber>
+                <USAddress>
+                    <AddressLine1Txt>Street address line one</AddressLine1Txt>
+                    <CityNm>City Name</CityNm>
+                    <StateAbbreviationCd>LA</StateAbbreviationCd>
+                    <ZIPCd>45210</ZIPCd>
+                </USAddress>
+                <Title>Jr.</Title>
+                <InCareOf>The Accounting Firm name</InCareOf>
+                <Domicile>Mesa County/Arizona</Domicile>
+                <Citizenship>Different Countryxx</Citizenship>
+                <DateOfDeath>2016-12-22</DateOfDeath>
+                <NonresidentAlien>false</NonresidentAlien>
+            </ContactInformation>
+            <GeneralInformation uuid="0ef317a2-cb82-4907-8266-9da01b690b53">
+                <SpecialExemptionFor1976Gifts>30000</SpecialExemptionFor1976Gifts>
+                <CreditforForeignGiftTaxes>1400</CreditforForeignGiftTaxes>
+                <TotalGSTExemptionUsedInPriorPeriod>1112345</TotalGSTExemptionUsedInPriorPeriod>
+                <ExemptionsAllocatedToTransfersNotShownInPart3>3456</ExemptionsAllocatedToTransfersNotShownInPart3>
+                <LastYrTaxableGSTGiftsMade>4</LastYrTaxableGSTGiftsMade>
+                <AddressChanged>false</AddressChanged>
+                <NoForm706ForDeceasedTaxpayer>false</NoForm706ForDeceasedTaxpayer>
+                <AmendedReturn>true</AmendedReturn>
+                <SchAItemReflectsDiscount>false</SchAItemReflectsDiscount>
+                <FiledPursuantToRevProc2016-49>true</FiledPursuantToRevProc2016-49>
+                <TransfersMadeToQualifiedTuitionProgram>false</TransfersMadeToQualifiedTuitionProgram>
+                <DiscussWithPaidPreparerInd>Yes</DiscussWithPaidPreparerInd>
+            </GeneralInformation>
+            <DSUEReceivedFromLastSpouse uuid="215634f0-1b58-4068-bffc-6c8dd4851501">
+                <NmOfDeceasedSpouse>tp last dead spouse</NmOfDeceasedSpouse>
+                <DateOfDeath>2012-12-12</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>111</DSUEFromSpouse>
+                <DSUEAmountApplied>222</DSUEAmountApplied>
+                <DateOfGift>2012-12-11</DateOfGift>
+            </DSUEReceivedFromLastSpouse>
+            <Extension uuid="48756851-4330-426b-9cda-7866cbc85701">
+                <AmountPaidWithExtension>5000</AmountPaidWithExtension>
+                <ExtensionRequestedOn8892>false</ExtensionRequestedOn8892>
+                <ExtensionRequestedOn4868>false</ExtensionRequestedOn4868>
+                <DeceasedDonors706Extended>false</DeceasedDonors706Extended>
+                <PmtOfTaxOnly-NoExtension>false</PmtOfTaxOnly-NoExtension>
+            </Extension>
+            <GiftsFromPriorPeriods uuid="d1cbded5-2005-4fe4-ac0f-fabd9438ee45">
+                <CalendarYearPP>1971</CalendarYearPP>
+                <InternalRevenueOffice>Atlanta, GA</InternalRevenueOffice>
+                <TaxableGifts>11470</TaxableGifts>
+                <CalendarQuarterPP>2</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="a80dec12-2e64-48a6-86e0-38f0ea147cae">
+                <CalendarYearPP>1975</CalendarYearPP>
+                <InternalRevenueOffice>Holtsville, NY</InternalRevenueOffice>
+                <TaxableGifts>12897</TaxableGifts>
+                <CalendarQuarterPP>4</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="cb55af62-75de-4654-81be-312ae0422f72">
+                <CalendarYearPP>1980</CalendarYearPP>
+                <InternalRevenueOffice>Andover, MA</InternalRevenueOffice>
+                <UnifiedCredit>13000</UnifiedCredit>
+                <TaxableGifts>13850</TaxableGifts>
+                <CalendarQuarterPP>3</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="6e5f4f8c-3c34-4421-8486-edd7bb925fd6">
+                <CalendarYearPP>1982</CalendarYearPP>
+                <InternalRevenueOffice>Kansas City, MO</InternalRevenueOffice>
+                <UnifiedCredit>14000</UnifiedCredit>
+                <TaxableGifts>14714</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="08ff12f5-befd-4c64-87d7-5dce7e1b1b49">
+                <CalendarYearPP>1985</CalendarYearPP>
+                <InternalRevenueOffice>Philadelphia, PA</InternalRevenueOffice>
+                <UnifiedCredit>15000</UnifiedCredit>
+                <TaxableGifts>15151</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="5e71eef8-4645-4f2c-8f54-be22ead78254">
+                <CalendarYearPP>1988</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>16000</UnifiedCredit>
+                <Exemption>16161</Exemption>
+                <TaxableGifts>16980</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="1cd32780-f278-41a8-9fc3-05d1b65adcce">
+                <CalendarYearPP>1989</CalendarYearPP>
+                <InternalRevenueOffice>Austin, TX</InternalRevenueOffice>
+                <UnifiedCredit>17000</UnifiedCredit>
+                <TaxableGifts>17618</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="82c175c4-0c78-4f0b-8af6-2144cccb911f">
+                <CalendarYearPP>1990</CalendarYearPP>
+                <InternalRevenueOffice>Ogden, UT</InternalRevenueOffice>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="58646059-85d2-41e9-ab09-0296dfc33fe7">
+                <CalendarYearPP>1995</CalendarYearPP>
+                <InternalRevenueOffice>Fresno, CA</InternalRevenueOffice>
+                <UnifiedCredit>19350</UnifiedCredit>
+                <Exemption>8500</Exemption>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="e5b71aad-3aac-43df-8748-02e3e13d69ef">
+                <CalendarYearPP>1997</CalendarYearPP>
+                <InternalRevenueOffice>Memphis, TN</InternalRevenueOffice>
+                <UnifiedCredit>19970</UnifiedCredit>
+                <Exemption>10000</Exemption>
+                <TaxableGifts>9797</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="b6979054-76df-4d7f-8ec9-fef5d0c2f998">
+                <CalendarYearPP>2001</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>20000</UnifiedCredit>
+                <TaxableGifts>29850</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="59905245aa1d38-4058-be9a-209d1ef8639c">
+                <CalendarYearPP>1969</CalendarYearPP>
+                <InternalRevenueOffice>Ogden, UT</InternalRevenueOffice>
+                <DSUEpredeceasedspouse>19691</DSUEpredeceasedspouse>
+                <UnifiedCredit>19692</UnifiedCredit>
+                <Exemption>19693</Exemption>
+                <TaxableGifts>19694</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="3ae77e78222a5c2-4caf-ba7b-2d51f12c7529">
+                <CalendarYearPP>2015</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>20151</UnifiedCredit>
+                <Exemption>20152</Exemption>
+                <TaxableGifts>20153</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="5968b525-da8e-4052-8858-20f1be03d477">
+                <CalendarYearPP>2002</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>25250</UnifiedCredit>
+                <TaxableGifts>18500</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <PriorYearSummary uuid="4596784e-94fc-458e-852e-4fd21308c5f7">
+                <TaxableGifts>2,342,958</TaxableGifts>
+                <PriorPeriodTaxableGifts>146,988</PriorPeriodTaxableGifts>
+                <TotalTaxableGifts>2,489,946</TotalTaxableGifts>
+                <TaxComputedOnTotalGifts>1,020,874</TaxComputedOnTotalGifts>
+                <TaxComputedOnPriorPeriodGifts>37,896</TaxComputedOnPriorPeriodGifts>
+                <TaxOnCurrentGifts>982,978</TaxOnCurrentGifts>
+                <MaximumApplicableCredit>345,800</MaximumApplicableCredit>
+                <ApplicableCreditAllowablePriorPeriods>156,320</ApplicableCreditAllowablePriorPeriods>
+                <UnusedApplicableCredit>189,480</UnusedApplicableCredit>
+                <SpecificExemptionfor1976Gifts>6,000</SpecificExemptionfor1976Gifts>
+                <AdjustedUnusedApplicableCredit>183,480</AdjustedUnusedApplicableCredit>
+                <ApplicableCredit>183,480</ApplicableCredit>
+                <CreditForForeignGiftTaxes>1,234</CreditForForeignGiftTaxes>
+                <TotalCredits>184,714</TotalCredits>
+                <GiftTaxPayable>798,264</GiftTaxPayable>
+                <GenerationSkippingTransferTaxes>413,642</GenerationSkippingTransferTaxes>
+                <TotalTax>1,211,906</TotalTax>
+                <BalanceDue>1,211,906</BalanceDue>
+                <MarginalTaxRate>49</MarginalTaxRate>
+                <EffectiveTaxRate>48.7</EffectiveTaxRate>
+            </PriorYearSummary>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="1f7ee38e-93a8-446a-8709-a143f8bdf3ef">
+                <NmOfDeceasedSpouse>tp-1</NmOfDeceasedSpouse>
+                <DateOfDeath>2011-01-01</DateOfDeath>
+                <DSUEFromSpouse>28</DSUEFromSpouse>
+                <DSUEAmountApplied>18</DSUEAmountApplied>
+                <DateOfGift>1999-01-01</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="86fba543-9c9a-4209-8df7-e590fb9fec89">
+                <NmOfDeceasedSpouse>tp-2</NmOfDeceasedSpouse>
+                <DateOfDeath>2011-02-02</DateOfDeath>
+                <DSUEFromSpouse>48</DSUEFromSpouse>
+                <DSUEAmountApplied>38</DSUEAmountApplied>
+                <DateOfGift>1998-02-02</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="a7879162-be26-4dfb-83b9-a2a0dcdd4bb7">
+                <NmOfDeceasedSpouse>tp predeceased sp 3</NmOfDeceasedSpouse>
+                <DateOfDeath>2013-09-08</DateOfDeath>
+                <PortabilityElection>false</PortabilityElection>
+                <DSUEFromSpouse>2131</DSUEFromSpouse>
+                <DSUEAmountApplied>2132</DSUEAmountApplied>
+                <DateOfGift>2010-08-03</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="080e63cd-1a14-45b0-818e-f4593e0283fe">
+                <NmOfDeceasedSpouse>tp predeceased sp 4</NmOfDeceasedSpouse>
+                <DateOfDeath>2016-08-09</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>20161</DSUEFromSpouse>
+                <DSUEAmountApplied>20162</DSUEAmountApplied>
+                <DateOfGift>2016-08-31</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="80793548-8090-4cd3-9bd7-a060b503b4f6">
+                <NmOfDeceasedSpouse>tp predeceased sp 5</NmOfDeceasedSpouse>
+                <DateOfDeath>2014-03-19</DateOfDeath>
+                <PortabilityElection>false</PortabilityElection>
+                <DSUEFromSpouse>2140</DSUEFromSpouse>
+                <DSUEAmountApplied>2141</DSUEAmountApplied>
+                <DateOfGift>2011-03-20</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="6421ba1a-aaba-4f68-a660-15e99340c2c2">
+                <NmOfDeceasedSpouse>tp predeceased sp 6</NmOfDeceasedSpouse>
+                <DateOfDeath>2012-04-23</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>2120</DSUEFromSpouse>
+                <DSUEAmountApplied>2122</DSUEAmountApplied>
+                <DateOfGift>2012-05-23</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="fbbff68e-b2fd-4562-89e0-f0b9e8756803">
+                <NmOfDeceasedSpouse>tp predeceased sp 7</NmOfDeceasedSpouse>
+                <DateOfDeath>2015-06-05</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>20150</DSUEFromSpouse>
+                <DSUEAmountApplied>20151</DSUEAmountApplied>
+                <DateOfGift>2005-07-05</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+        </Taxpayer>
+        <SplitGifts uuid="f873bd54-91b5-43f2-8805-34ff26de482a">
+            <GiftSplitting>true</GiftSplitting>
+            <WillFileForm709>true</WillFileForm709>
+            <MarriedEntireYear>true</MarriedEntireYear>
+        </SplitGifts>
+        <Spouse uuid="b4ebdd9f-4002-45a3-8d67-efe0a8030885">
+            <AddressDifferent>false</AddressDifferent>
+            <ContactInformation uuid="8a680e3e-dd8b-4b97-8420-cad680669ad7">
+                <SocialSecurityNumber>852458632</SocialSecurityNumber>
+                <LastName>Donee No. 1</LastName>
+                <FirstName>Wife</FirstName>
+                <DateOfDeath>2016-12-29</DateOfDeath>
+                <NonresidentAlien>false</NonresidentAlien>
+                <USAddress uuid="d34545df-1878-440a-83d3-c1733e6ecb46"></USAddress>
+            </ContactInformation>
+            <GeneralInformation uuid="ad30642f-a3b9-4ed4-894a-4d30f79ed536">
+                <AddressChanged>false</AddressChanged>
+                <NoForm706ForDeceasedTaxpayer>false</NoForm706ForDeceasedTaxpayer>
+                <AmendedReturn>true</AmendedReturn>
+                <SchAItemReflectsDiscount>false</SchAItemReflectsDiscount>
+                <FiledPursuantToRevProc2016-49>true</FiledPursuantToRevProc2016-49>
+                <TransfersMadeToQualifiedTuitionProgram>false</TransfersMadeToQualifiedTuitionProgram>
+                <ExemptionsAllocatedToTransfersNotShownInPart3>1500</ExemptionsAllocatedToTransfersNotShownInPart3>
+                <DiscussWithPaidPreparerInd>Yes</DiscussWithPaidPreparerInd>
+            </GeneralInformation>
+            <DSUEReceivedFromLastSpouse uuid="a5d08b09-59a4-4157-8c9d-cffb7cd39057">
+                <NmOfDeceasedSpouse>sp last dead spouse</NmOfDeceasedSpouse>
+                <DateOfDeath>2011-11-11</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>11</DSUEFromSpouse>
+                <DSUEAmountApplied>22</DSUEAmountApplied>
+                <DateOfGift>2011-11-10</DateOfGift>
+            </DSUEReceivedFromLastSpouse>
+            <Extension uuid="f68dfcd8-e0b4-4575-9f39-82ac5754de15">
+                <ExtensionRequestedOn8892>false</ExtensionRequestedOn8892>
+                <ExtensionRequestedOn4868>false</ExtensionRequestedOn4868>
+                <DeceasedDonors706Extended>false</DeceasedDonors706Extended>
+                <PmtOfTaxOnly-NoExtension>false</PmtOfTaxOnly-NoExtension>
+            </Extension>
+            <GiftsFromPriorPeriods uuid="91f8d42a-9a75-4ff5-99d0-57074340c9f7">
+                <CalendarYearPP>1971</CalendarYearPP>
+                <InternalRevenueOffice>Atlanta, GA</InternalRevenueOffice>
+                <TaxableGifts>11470</TaxableGifts>
+                <CalendarQuarterPP>2</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="04f73a0a-7185-4f53-8526-5db576a1f3ba">
+                <CalendarYearPP>1975</CalendarYearPP>
+                <InternalRevenueOffice>Holtsville, NY</InternalRevenueOffice>
+                <TaxableGifts>12897</TaxableGifts>
+                <CalendarQuarterPP>2</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="c3070250-b4b3-49c6-9fb0-c219d054f6fa">
+                <CalendarYearPP>1980</CalendarYearPP>
+                <InternalRevenueOffice>Andover, MA</InternalRevenueOffice>
+                <UnifiedCredit>13000</UnifiedCredit>
+                <TaxableGifts>13850</TaxableGifts>
+                <CalendarQuarterPP>3</CalendarQuarterPP>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="f41c2dc1-1fef-4d99-a04f-1aca6d1adfa5">
+                <CalendarYearPP>1982</CalendarYearPP>
+                <InternalRevenueOffice>Kansas City, MO</InternalRevenueOffice>
+                <UnifiedCredit>14000</UnifiedCredit>
+                <TaxableGifts>14714</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="7f94df15-930a-48fb-9b72-6cb842899688">
+                <CalendarYearPP>1985</CalendarYearPP>
+                <InternalRevenueOffice>Philadelphia, PA</InternalRevenueOffice>
+                <UnifiedCredit>15000</UnifiedCredit>
+                <TaxableGifts>15151</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="92c98f17-a170-4bb7-9652-14bb5bfe666f">
+                <CalendarYearPP>1988</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>16000</UnifiedCredit>
+                <Exemption>16161</Exemption>
+                <TaxableGifts>16980</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="51b4eda0-a05e-4139-8313-7220f5b93d7c">
+                <CalendarYearPP>1989</CalendarYearPP>
+                <InternalRevenueOffice>Austin, TX</InternalRevenueOffice>
+                <UnifiedCredit>17000</UnifiedCredit>
+                <TaxableGifts>17618</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="c0c09a88-23a8-4117-8faa-e4b475263e16">
+                <CalendarYearPP>1990</CalendarYearPP>
+                <InternalRevenueOffice>Ogden, UT</InternalRevenueOffice>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="141c9e23-82d3-4a4a-880a-65af298f5a0a">
+                <CalendarYearPP>1995</CalendarYearPP>
+                <InternalRevenueOffice>Fresno, CA</InternalRevenueOffice>
+                <UnifiedCredit>19350</UnifiedCredit>
+                <Exemption>8500</Exemption>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="1740b933-8b66-467e-8bb2-31e55201d6ad">
+                <CalendarYearPP>1997</CalendarYearPP>
+                <InternalRevenueOffice>Memphis, TN</InternalRevenueOffice>
+                <UnifiedCredit>19970</UnifiedCredit>
+                <Exemption>10000</Exemption>
+                <TaxableGifts>9797</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="992b3285-43a7-495c-8714-0df1ff6228e9">
+                <CalendarYearPP>2001</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>20000</UnifiedCredit>
+                <TaxableGifts>29850</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="191a371d-a1c2-4798-b56c-3f48f0ad86c9">
+                <CalendarYearPP>2002</CalendarYearPP>
+                <InternalRevenueOffice>Cincinnati, OH</InternalRevenueOffice>
+                <UnifiedCredit>25250</UnifiedCredit>
+                <TaxableGifts>18500</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="eb83e68bfff11f-4e7f-8367-3329d142699b">
+                <CalendarYearPP>2014</CalendarYearPP>
+                <InternalRevenueOffice>Fresno, CA</InternalRevenueOffice>
+                <DSUEpredeceasedspouse>2141</DSUEpredeceasedspouse>
+                <UnifiedCredit>2142</UnifiedCredit>
+                <Exemption>2143</Exemption>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="226132fbdda85f-4e68-b10d-cf0ed5faae1e">
+                <CalendarYearPP>1970</CalendarYearPP>
+                <InternalRevenueOffice>Ogden, UT</InternalRevenueOffice>
+                <DSUEpredeceasedspouse>19701</DSUEpredeceasedspouse>
+                <UnifiedCredit>19702</UnifiedCredit>
+                <Exemption>19703</Exemption>
+                <TaxableGifts>19704</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <GiftsFromPriorPeriods uuid="51332218-966c-49a2-8a7b-06b479e6d5c5">
+                <CalendarYearPP>2016</CalendarYearPP>
+                <InternalRevenueOffice>Andover, MA</InternalRevenueOffice>
+                <TaxableGifts>1000</TaxableGifts>
+            </GiftsFromPriorPeriods>
+            <PriorYearSummary uuid="877d5a86-578a-43e4-b5b0-16174710ab72"></PriorYearSummary>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="ab1b4af7-5b0d-4b44-8c65-62fb652417d1">
+                <NmOfDeceasedSpouse>sp-1</NmOfDeceasedSpouse>
+                <DateOfDeath>2011-01-01</DateOfDeath>
+                <DSUEFromSpouse>90</DSUEFromSpouse>
+                <DSUEAmountApplied>900</DSUEAmountApplied>
+                <DateOfGift>1990-02-01</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="df11965d-b971-4cd7-89d2-3e72854acbaf">
+                <NmOfDeceasedSpouse>sp-2</NmOfDeceasedSpouse>
+                <DateOfDeath>2011-02-02</DateOfDeath>
+                <DSUEFromSpouse>20</DSUEFromSpouse>
+                <DSUEAmountApplied>200</DSUEAmountApplied>
+                <DateOfGift>1992-02-01</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="9e69807c-49cf-4d39-89f6-3e6119fa1c70">
+                <NmOfDeceasedSpouse>sp predeceased sp 4</NmOfDeceasedSpouse>
+                <DateOfDeath>2012-03-01</DateOfDeath>
+                <PortabilityElection>false</PortabilityElection>
+                <DSUEFromSpouse>201211</DSUEFromSpouse>
+                <DSUEAmountApplied>201222</DSUEAmountApplied>
+                <DateOfGift>2012-03-02</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="053a1613-4aa6-4faa-83ed-4e5e159f0cda">
+                <NmOfDeceasedSpouse>sp predeceased sp 5</NmOfDeceasedSpouse>
+                <DateOfDeath>2016-09-09</DateOfDeath>
+                <PortabilityElection>false</PortabilityElection>
+                <DSUEFromSpouse>2160</DSUEFromSpouse>
+                <DSUEAmountApplied>2161</DSUEAmountApplied>
+                <DateOfGift>2016-09-08</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="d4df2bf4-8812-4bc5-91ce-e4eeff065042">
+                <NmOfDeceasedSpouse>sp predeceased sp 6</NmOfDeceasedSpouse>
+                <DateOfDeath>2015-12-31</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>2151</DSUEFromSpouse>
+                <DSUEAmountApplied>2152</DSUEAmountApplied>
+                <DateOfGift>2004-08-01</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="aa95ed60-e017-4f8f-86df-72648b136773">
+                <NmOfDeceasedSpouse>sp predeceased  before 2011</NmOfDeceasedSpouse>
+                <DateOfDeath>2010-08-07</DateOfDeath>
+                <DSUEFromSpouse>20130</DSUEFromSpouse>
+                <DSUEAmountApplied>20132</DSUEAmountApplied>
+                <DateOfGift>2010-09-06</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="fa2a6801-4e62-4262-a28b-e6f9c0d1d86c">
+                <NmOfDeceasedSpouse>sp predeceased sp 8</NmOfDeceasedSpouse>
+                <DateOfDeath>2012-11-11</DateOfDeath>
+                <PortabilityElection>false</PortabilityElection>
+                <DSUEFromSpouse>20120</DSUEFromSpouse>
+                <DSUEAmountApplied>20121</DSUEAmountApplied>
+                <DateOfGift>2000-09-15</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+            <DSUEReceivedFromPreDeceasedSpouses uuid="25febffb-9cab-404a-9204-a4d2cc17be26">
+                <NmOfDeceasedSpouse>sp predeceased sp 9</NmOfDeceasedSpouse>
+                <DateOfDeath>2013-09-09</DateOfDeath>
+                <PortabilityElection>true</PortabilityElection>
+                <DSUEFromSpouse>2013333</DSUEFromSpouse>
+                <DSUEAmountApplied>2013332</DSUEAmountApplied>
+                <DateOfGift>2009-09-09</DateOfGift>
+            </DSUEReceivedFromPreDeceasedSpouses>
+        </Spouse>
+        <MiscellaneousPP uuid="221a674e-9acb-460a-9d30-fe2bc83ca727">
+            <PreparedBy>Firm</PreparedBy>
+        </MiscellaneousPP>
+        <DoneePP uuid="d58a18a9-09cc-463e-9181-ea09fadff20e">
+            <DoneeIndex>1</DoneeIndex>
+            <Name>Wife Donee No. 1</Name>
+            <Address uuid="09a9c697-f52d-40fc-80c2-3ee6ae9997d1">
+                <AddressLine1Txt>Street address line one</AddressLine1Txt>
+                <CityNm>City Name</CityNm>
+                <StateAbbreviationCd>LA</StateAbbreviationCd>
+                <ZIPCd>45210</ZIPCd>
+            </Address>
+            <DoneeType>ToSpouse</DoneeType>
+            <Relationship>Wife</Relationship>
+        </DoneePP>
+        <DoneePP uuid="c2adb200-0745-48b3-ad87-2608e3a13781">
+            <DoneeIndex>2</DoneeIndex>
+            <Name>Son</Name>
+            <NameLine2>Name line 2 for Donee No. 2</NameLine2>
+            <Address uuid="1a0cb24d-627d-49af-985d-4213985264e4">
+                <AddressLine1Txt>Address for donee No. 2</AddressLine1Txt>
+                <CityNm>City Name</CityNm>
+                <StateAbbreviationCd>UT</StateAbbreviationCd>
+                <ZIPCd>63201</ZIPCd>
+            </Address>
+            <DoneeType>Common</DoneeType>
+            <Relationship>Son</Relationship>
+        </DoneePP>
+        <DoneePP uuid="a1f7bcec-4086-43fe-b3ef-62b9c2da7ab8">
+            <DoneeIndex>3</DoneeIndex>
+            <Name>Daughter</Name>
+            <Address uuid="3ad35592-ba07-4f42-9b7b-460ea086860e">
+                <AddressLine1Txt>Address for donee No. 3</AddressLine1Txt>
+                <CityNm>Different City</CityNm>
+                <StateAbbreviationCd>CA</StateAbbreviationCd>
+                <ZIPCd>36521</ZIPCd>
+            </Address>
+            <DoneeType>Common</DoneeType>
+            <Relationship>Daughter</Relationship>
+        </DoneePP>
+        <DoneePP uuid="47b7a669-0e84-4e42-b5dd-cc5dc0c4f56b">
+            <DoneeIndex>4</DoneeIndex>
+            <Name>Charitable organization</Name>
+            <NameLine2>Donee No. 4</NameLine2>
+            <Address uuid="278af94a-4763-4acb-81e3-9c651d36d8c7">
+                <AddressLine1Txt>Address for Donee No. 4</AddressLine1Txt>
+                <CityNm>City Name</CityNm>
+                <StateAbbreviationCd>DC</StateAbbreviationCd>
+                <ZIPCd>06548</ZIPCd>
+            </Address>
+            <DoneeType>ToCharitableOrg</DoneeType>
+            <Relationship>Other</Relationship>
+        </DoneePP>
+        <DoneePP uuid="010fd6e1-3ca2-4f99-8eef-de245753cdbf">
+            <DoneeIndex>5</DoneeIndex>
+            <Name>Grandson</Name>
+            <NameLine2>Name for donee no. 5</NameLine2>
+            <Address uuid="f2209aba-7679-46fe-9232-6c6c6605686a">
+                <AddressLine1Txt>Address for donee No. 5</AddressLine1Txt>
+                <CityNm>City Five</CityNm>
+                <StateAbbreviationCd>CA</StateAbbreviationCd>
+                <ZIPCd>35421</ZIPCd>
+            </Address>
+            <DoneeType>SkipPerson</DoneeType>
+            <Relationship>Grandson</Relationship>
+        </DoneePP>
+        <DoneePP uuid="32599317-c6fd-46c4-9dfe-473556f36c95">
+            <DoneeIndex>6</DoneeIndex>
+            <Name>Grand daughter</Name>
+            <Address uuid="1c136309-0ea4-4a12-8728-aad24e452e99">
+                <AddressLine1Txt>Address for donee No. 6</AddressLine1Txt>
+                <CityNm>Different City</CityNm>
+                <StateAbbreviationCd>VI</StateAbbreviationCd>
+                <ZIPCd>02458-8563</ZIPCd>
+            </Address>
+            <DoneeType>SkipPerson</DoneeType>
+            <Relationship>Granddaughter</Relationship>
+        </DoneePP>
+        <DoneePP uuid="97a81b9a-1263-4072-a8fd-f73dbd67e366">
+            <DoneeIndex>7</DoneeIndex>
+            <Name>Church</Name>
+            <Address uuid="1ca36b27-3556-445f-95ee-24ca2f1a1071">
+                <AddressLine1Txt>Address for Donee No. 7</AddressLine1Txt>
+                <CityNm>Home Town</CityNm>
+                <StateAbbreviationCd>MI</StateAbbreviationCd>
+                <ZIPCd>65214</ZIPCd>
+            </Address>
+            <DoneeType>ToCharitableOrg</DoneeType>
+            <Relationship>No relation</Relationship>
+        </DoneePP>
+        <DoneePP uuid="ec4cdff3-5983-49a1-84db-f5a449ca4bff">
+            <DoneeIndex>8</DoneeIndex>
+            <Name>General Skipping Trust xxxxend</Name>
+            <NameLine2>GST Trust for Grandson</NameLine2>
+            <Address uuid="0b58a965-b82e-4be4-88a4-76986d87b1d7">
+                <AddressLine1Txt>Address for Donee No. 8</AddressLine1Txt>
+                <CityNm>Dallas xxxxxxxxxxxxend</CityNm>
+                <StateAbbreviationCd>TX</StateAbbreviationCd>
+                <ZIPCd>75404</ZIPCd>
+            </Address>
+            <DoneeType>GSTTrust</DoneeType>
+            <Relationship>Other</Relationship>
+        </DoneePP>
+        <DoneePP uuid="4ffec123-0af8-4515-b536-edcd7ab81c87">
+            <DoneeIndex>9</DoneeIndex>
+            <Name>Donee another skip</Name>
+            <Address uuid="5800382d-812a-4719-b7b1-91fdc10b4160">
+                <AddressLine1Txt>Donee another skip address</AddressLine1Txt>
+                <CityNm>Donee another city</CityNm>
+                <StateAbbreviationCd>OH</StateAbbreviationCd>
+                <ZIPCd>96587</ZIPCd>
+            </Address>
+            <DoneeType>SkipPerson</DoneeType>
+            <SpouseTrustID uuid="36728006-ec8e-40f6-81d5-62a5c2cf72f5"></SpouseTrustID>
+            <Relationship>Great-grandson</Relationship>
+        </DoneePP>
+        <DoneePP uuid="76514b86-24b1-4e2b-9da4-defa52b78b71">
+            <DoneeIndex>10</DoneeIndex>
+            <Name>trust</Name>
+            <Address uuid="b2fc9147-f96d-4a27-8391-3b5844a05589">
+                <AddressLine1Txt>trust address</AddressLine1Txt>
+                <CityNm>tyrust city</CityNm>
+                <StateAbbreviationCd>TN</StateAbbreviationCd>
+                <ZIPCd>78888</ZIPCd>
+            </Address>
+            <DoneeType>GSTTrust</DoneeType>
+            <SpouseTrustID uuid="086bfa3f-ea2b-4348-8403-6fbfdc6add86">
+                <EIN>74-8888888</EIN>
+            </SpouseTrustID>
+            <Relationship>No relation</Relationship>
+        </DoneePP>
+        <GiftPP uuid="bec18e9a-4e87-4987-badb-f76904bb86d9">
+            <DoneeInformation uuid="91d486d4-54a2-4fd4-862a-a24d2d9eb9cc">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>110890</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>105200</DonorsBasisInput>
+            <DateOfGift>2016-01-01</DateOfGift>
+            <Overrides uuid="d713b1fd-94ab-443e-aced-d1c13fb3443d"></Overrides>
+            <Miscellaneous uuid="84f740d8-75c7-44f6-80d7-c7c9602edd15">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="a366b167-ce71-457f-8083-a9746592da62">
+                <GenericDescription>Gift No. 1 Cash to Wife</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="4b33db88-7273-46fe-8025-9238b819725b">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>true</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-01-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="200a1799-f205-4c0b-aa88-ac84a17724d9">
+            <DoneeInformation uuid="f796a187-0a31-4774-ac9b-275d79e431c2">
+                <DoneeIndex>2</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>325000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>325000</DonorsBasisInput>
+            <DateOfGift>2016-07-15</DateOfGift>
+            <Overrides uuid="b7cb7121-0e76-4243-8097-686c0f79d7ae"></Overrides>
+            <Miscellaneous uuid="a01f1ee8-ff38-4940-81e8-95c39d0e2dff">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="f34555f2-3c30-4ac2-aaed-267f87e5f511">
+                <GenericDescription>Gift No.2 to son</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="93395435-2f08-4a1b-922c-becd83134ad7">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>true</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-07-15</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="1dd4c34d-9cef-489c-b131-d38dac7ad5b4">
+            <DoneeInformation uuid="6b2d0ca7-39ba-4bcd-80fa-7d6816fdb3af">
+                <DoneeIndex>3</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>300000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>285000</DonorsBasisInput>
+            <DateOfGift>2016-12-12</DateOfGift>
+            <Overrides uuid="d2e18190-3cf9-4d3e-9c86-9edb0f830d71"></Overrides>
+            <Miscellaneous uuid="806751e9-c850-4bce-b348-c6eddde7fb63">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="5038d6aa-9ccc-4b35-8682-2203c775e1df">
+                <GenericDescription>Gift No. 3 to daughter</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="d4ed1387-b2cc-4439-8f7d-1c876e78b727">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-12-12</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="44369c84-bfdf-4f6e-90e3-c9098e7d0d4c">
+            <DoneeInformation uuid="ba711bc2-0d5a-42db-8ac4-90de65becd30">
+                <DoneeIndex>4</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>100000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>56780</DonorsBasisInput>
+            <DateOfGift>2016-04-04</DateOfGift>
+            <Overrides uuid="2e57f454-5f8d-4bc5-8333-c58a87b17ef5"></Overrides>
+            <Miscellaneous uuid="508cfde7-183a-4797-b468-3255850bdc63">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="01c4b69e-b7ec-4238-9787-8e1a4e7bea69">
+                <GenericDescription>Gift to charitable organization</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="fd19dcf0-6c15-48c2-8455-9236b6e7aeea">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-04-04</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="301bb34b-7f21-4eb6-921b-e7c0208fffda">
+            <DoneeInformation uuid="8fb5a8b7-0b91-489b-aa08-26687b116ca3">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>325000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>350000</DonorsBasisInput>
+            <DateOfGift>2016-12-31</DateOfGift>
+            <Overrides uuid="671a28cf-c525-4097-8714-7b483776cf1e"></Overrides>
+            <Miscellaneous uuid="bda4119a-6280-4631-8893-dbe52f2b8ce7">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="65d4f2e3-c5c2-4587-86c6-0fb3e8d436f7">
+                <GenericDescription>Gift to Donee No. 5</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="38dc5036-9bfc-4b62-91db-6510571ae8a4">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>true</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-12-19</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="2dd0ff74-be46-49fa-acd7-8a2e8fedcbba">
+            <DoneeInformation uuid="bb721f1d-d654-46c5-87f2-f0bd4721523c">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>258369</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>147258</DonorsBasisInput>
+            <DateOfGift>2016-10-28</DateOfGift>
+            <Overrides uuid="667743ee-6929-4a18-8564-456bb8ceb505">
+                <SplitGift>true</SplitGift>
+            </Overrides>
+            <Miscellaneous uuid="1221c39a-ce1a-4c78-8196-4ebdafc100ad">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="260410d4-6832-4a30-8b25-cf3a490c4c6a">
+                <GenericDescription>gift No. 6 (to granddaughter )</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="1f8e3809-b31c-4d91-86d1-183ffea4a489">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-10-28</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="1ae7673c-f4b8-4dcc-9d55-16ae0cada481">
+            <DoneeInformation uuid="9f49c211-780e-4e55-85f8-0e75abd399f7">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>23456</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>10000</DonorsBasisInput>
+            <DateOfGift>2016-11-11</DateOfGift>
+            <Overrides uuid="d6512aa2-ac6c-4db4-af1e-73519972bdc2"></Overrides>
+            <Miscellaneous uuid="f1efa34d-2969-4be5-80ae-de63b9e9e772">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="60590db9-b351-4549-80a0-1cbf9ae9cd64">
+                <GenericDescription>Gift No. 7 (daughter)</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="d73c3f40-0a7e-4a39-81c7-9b331f872f5a">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-11-11</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="712aeff1-c6de-439a-8224-f2d7be0b986f">
+            <DoneeInformation uuid="124e4f2b-0414-4af7-82f8-e09ff4dde73d">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>15000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>16500</DonorsBasisInput>
+            <DateOfGift>2016-02-01</DateOfGift>
+            <Overrides uuid="03bfd4d6-d792-4b01-ac09-1eac1642f7c8"></Overrides>
+            <Miscellaneous uuid="d776568d-c917-4db8-8892-a67044a2f7ce">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="bdb7627d-22fd-4704-8d2b-86b74b6408c9">
+                <GenericDescription>Gift No. 8 long descriptions The elections described in 1 and 2 must be made on the Form 709 that is filed by the transferor to report the transfer that is being valued under section 2701. the elections are made by attaching a statement to Form 709. for information on what must be in the statement and for definitions and other details on the elections, see section 2701 and Regulations section 25.2701-2(c).</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="f9a5dcba-d730-4cc8-82f5-18f5b17a8e51">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-02-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="e729ee02-e387-4ec3-b1c4-6044494b25b6">
+            <DoneeInformation uuid="63f4e3cb-dd56-4786-93f6-9b54208ce675">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>30000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <Overrides uuid="f67cb8eb-8949-44f4-9f93-bad750b98901"></Overrides>
+            <Miscellaneous uuid="0b3b3b48-9fe0-4e12-8df5-39bc4432a076">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>37500</DonorsBasisInput>
+            <Elections uuid="c1566290-c779-498a-97f9-06f4ede085b5">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>true</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <GiftDescriptions uuid="7e5d53c2-ad32-4980-8f4a-882f00fc102b">
+                <GenericDescription>elect out of QTIP</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-12-31</DateOfGift>
+            <DateOfGiftInput>2016-12-18</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="9ec1d85b-c030-4ba5-8b3a-bc663fa0aea1">
+            <DoneeInformation uuid="4b6ba658-f988-4ea4-9797-cbfc8d1a81c8">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>14700</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>10500</DonorsBasisInput>
+            <DateOfGift>2016-07-11</DateOfGift>
+            <Overrides uuid="457bfcf9-9d22-474e-8fb8-f1b8b5a349e7"></Overrides>
+            <Miscellaneous uuid="e9cf61bf-2540-43fd-bdfb-07bc462d1361">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+                <ETIP>ActualTransfer</ETIP>
+            </Miscellaneous>
+            <GiftDescriptions uuid="cc33b1de-d68e-472b-b917-a403528d0b49">
+                <GenericDescription>Special ETIP = actual transfer</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="6cbba800-c422-47b2-86b5-10827b433d1d">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-07-11</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="4e81a2cd-2d49-4a1c-b4c1-4ca56b6d9c66">
+            <DoneeInformation uuid="b25ed0d9-5658-474a-8f9b-4d4ad4cb429a">
+                <DoneeIndex>4</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>21400</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>25000</DonorsBasisInput>
+            <DateOfGift>2016-06-01</DateOfGift>
+            <Overrides uuid="54b7aed1-08b1-4570-b583-ea951192c57e"></Overrides>
+            <Miscellaneous uuid="bc23fa31-6525-4aa5-85e1-c3c9b6bd2c3c">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="0fe57825-9e3f-4649-afbd-d2416c15d4ac">
+                <GenericDescription>subj. to GST</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="b48b11b2-0fce-44bb-b448-341e3636692c">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-06-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="f112c8e9-f76c-44c9-be71-df2b5e36dd17">
+            <DoneeInformation uuid="743044fa-1daa-4735-810d-4427e551ae10">
+                <DoneeIndex>3</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>169000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>169000</DonorsBasisInput>
+            <DateOfGift>2016-05-05</DateOfGift>
+            <Overrides uuid="55a78d9f-4caf-402a-8de9-5c91430e617c">
+                <SplitGift>false</SplitGift>
+            </Overrides>
+            <Miscellaneous uuid="c5672e0b-098c-4d82-af57-0b07d0905feb">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="c20ba0f1-7d9a-4b6d-ba44-958bf1253c71">
+                <GenericDescription>Do not split</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="37b34e0b-fda6-4a8a-8318-d65a8efdfb2c">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-05-05</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="4b01bd4f-c227-4c9c-8d04-f4014bf6da53">
+            <DoneeInformation uuid="d7f715dd-529f-4052-87a4-eb5030b84de2">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>100000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>123450</DonorsBasisInput>
+            <DateOfGift>2016-10-10</DateOfGift>
+            <Overrides uuid="2a6b54d1-5067-4fd6-9dac-e1c2b1615b71">
+                <MaritalDeductionBeforeExclusion>0</MaritalDeductionBeforeExclusion>
+            </Overrides>
+            <Miscellaneous uuid="aab68ba4-d12a-4a5b-8bb8-17d0c52ac23e">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="6ebbca14-3f04-4639-a1c8-a0745599c2c6">
+                <GenericDescription>override marital ded. to zero</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="80e43d24-081a-4e15-ba17-012a2f84155a">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-10-10</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="54660f68-3e91-4896-95a6-c7b785f7b6cd">
+            <DoneeInformation uuid="91f1463c-b0df-4326-8b51-fd3226702b0f">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>6565600</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>50000</DonorsBasisInput>
+            <Overrides uuid="30026e8d-ef51-4871-9b32-591238425c45"></Overrides>
+            <Miscellaneous uuid="d3682b4c-f09d-45ec-867b-5565cbd09404">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="901a06a1-5a58-4aa2-89cc-3ebaa166b38d">
+                <GenericDescription>Gift to GST</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="7dd31b45-710a-4163-8442-46ce81715211">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>true</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectTreatAnyTrustAsGST</ElectOutPart2632c>
+            </Elections>
+            <DateOfGift>2016-09-15</DateOfGift>
+            <DateOfGiftInput>2016-09-15</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="6e42625a-6ec6-4446-8d89-34e3d31d1396">
+            <DoneeInformation uuid="f1dff852-4b59-4d5b-8221-0653fbcf3dae">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>25000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>15352</DonorsBasisInput>
+            <Overrides uuid="63f45266-57df-46af-91e5-ae5b19d7fc15">
+                <GSTNontaxablePortion>12500</GSTNontaxablePortion>
+            </Overrides>
+            <Miscellaneous uuid="441718a8-42a4-4048-a96f-a9163b589227">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="eb3cc49b-7aa2-43eb-8fe9-004fe6dcf962">
+                <GenericDescription>Gift to Grandson - elect out of 2632(b)</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="161f8b53-bef6-48b8-9829-1cc681e1b58c">
+                <ElectOutPart2-2632bAlloc>true</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGift>2016-08-15</DateOfGift>
+            <DateOfGiftInput>2016-08-15</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="f360c78c-74df-4784-b7ae-b7fecc570709">
+            <DoneeInformation uuid="edd1648d-4304-4c81-8bb2-134bc05d4de0">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>38950</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>50000</DonorsBasisInput>
+            <DateOfGift>2012-12-12</DateOfGift>
+            <Overrides uuid="29f3ddbe-6040-45a4-8ea5-fd2f93faae23"></Overrides>
+            <Miscellaneous uuid="59b6da92-fcd5-4670-8b96-17bceefca457">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="d4b9d247-24ab-40e3-80e7-1f85754d7cb9">
+                <GenericDescription>Gift to GST - elect out of 2632(c)</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="0a91f76b-6975-4ec9-8bfb-33e8fa68eee9">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectOutOfCurrentTransfer</ElectOutPart2632c>
+            </Elections>
+            <DateOfGiftInput>2016-12-13</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="0036e4ec-7fc7-45fe-80d5-cf9ada8f49eb">
+            <DoneeInformation uuid="ce772a53-c76b-43e1-b92b-e6a50c899c78">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>10151</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>9875</DonorsBasisInput>
+            <DateOfGift>2016-11-11</DateOfGift>
+            <Overrides uuid="06a70011-18f0-415a-8e1f-1a1bf654fd93"></Overrides>
+            <Miscellaneous uuid="b42ff2ad-0ff0-4d3b-8961-4c4429fe9607">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="1ea3d55f-88fa-4f34-8eea-523ce3a80015">
+                <GenericDescription>Gift to Spouse</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="1d7d93cd-e507-438c-9b91-83812211d41f">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-11-12</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="7336636a-70a7-4c1a-ab2e-d7ac926508f6">
+            <DoneeInformation uuid="913efb5e-2a74-4fa3-8382-fc6eff3dc6b3">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>50000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>50000</DonorsBasisInput>
+            <DateOfGift>2016-10-28</DateOfGift>
+            <Overrides uuid="eeec219d-c68c-4cc5-8e39-8ce2d0660a10"></Overrides>
+            <Miscellaneous uuid="397eaab4-e3e8-4e08-8573-e989e9fb4917">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="0257727a-347d-46dd-80ae-2a0fd4ace154">
+                <GenericDescription>Birthday Gift to Spouse</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="a1dab0c5-ef80-445c-82e0-307db62c19d6">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-10-29</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="c9b0bf60-6f87-4395-8e8e-aa4fb8e6b9a9">
+            <DoneeInformation uuid="caefa44b-e578-4c95-9946-b476f3c324ce">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>7000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>7500</DonorsBasisInput>
+            <DateOfGift>2016-12-12</DateOfGift>
+            <Overrides uuid="f6123fa1-197d-425c-8d6a-a6fcea45d9b4"></Overrides>
+            <Miscellaneous uuid="136a59a9-db86-414a-891e-93ded746b3bc">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="a0e88a57-0762-44de-82e3-c7dce53aa21d">
+                <GenericDescription>Gift to Spouse</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="a2315978-16d8-48dd-8e53-aaecdef1ead8">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-12-12</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="a85decf2-41b7-43b0-9787-f1247bd0bc63">
+            <DoneeInformation uuid="5fbb3231-d8e8-4af6-8621-a3c58f64645e">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>7548</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>15800</DonorsBasisInput>
+            <DateOfGift>2016-07-15</DateOfGift>
+            <Overrides uuid="6306d394-e33e-4199-b202-b30986b05a08"></Overrides>
+            <Miscellaneous uuid="156cff2c-d400-4137-825d-f463cb891333">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="e9c83dff-1ea5-4470-aadd-8e05386b5069">
+                <GenericDescription>Gift to spouse</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="f5539efd-a60f-4a5b-893e-24ba8e20c7ee">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-07-16</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="c38e25e4-a5f6-424e-8d50-f72d610f06e4">
+            <DoneeInformation uuid="0aada9d7-67a0-4fd6-8c23-333aae2660fb">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>5000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>4508</DonorsBasisInput>
+            <DateOfGift>2016-10-10</DateOfGift>
+            <Overrides uuid="9098cd1a-69bc-4a3c-a3ac-d1316fbbceac"></Overrides>
+            <Miscellaneous uuid="71f7e608-e50b-4a51-8599-2480ab1f5f48">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="7846a6ae-26d1-409e-a1eb-a226678859cd">
+                <GenericDescription>Another gift to spouse</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="cd5f370d-b6a2-4700-8e93-79dedbb9ee3a">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-10-10</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="17ba826b-5bbc-4b7c-8427-98102903ecf8">
+            <DoneeInformation uuid="afc0b4e6-d01e-498c-a114-e940ffe40650">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>8000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>8000</DonorsBasisInput>
+            <DateOfGift>2016-10-15</DateOfGift>
+            <Overrides uuid="c1e3ae78-b40a-4483-afe2-be6967311e18"></Overrides>
+            <Miscellaneous uuid="f54bc2e5-f51c-47fa-b356-b927bfa11e7f">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="08a82af7-b45d-4f9f-8055-97bfc6379e85">
+                <GenericDescription>Birthday Gift to grandson</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="1cab3fd6-35c5-417b-8dd7-d467736cb75d">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGiftInput>2016-10-15</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="9f46224d-92f9-4211-b928-746395aa3e22">
+            <DoneeInformation uuid="799f4e68-dcf0-4761-b5ec-59d1a079125b">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>58500</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>40000</DonorsBasisInput>
+            <Elections uuid="550a509e-31ed-43e9-be34-064ad2cf02df">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="aedc7db1-e916-4129-93f4-6c603c86f9b7"></Overrides>
+            <Miscellaneous uuid="a60c31f8-5d4a-4803-8537-78afcdaddcf3">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <DateOfGift>2016-10-10</DateOfGift>
+            <GiftDescriptions uuid="bfc4c389-9433-4131-88d2-e42b3bf3cc21">
+                <GenericDescription>Spouse&apos;s gift to skip person</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-10-10</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="864b4207-ec74-4f5c-9cf1-5f3205e942bd">
+            <DoneeInformation uuid="bfbffbb8-ab9b-4472-ac57-f1b075f08802">
+                <DoneeIndex>4</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>20000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>13500</DonorsBasisInput>
+            <Elections uuid="572c971e-660e-4442-b3dd-85488d9da3de">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="1e15735f-daf8-4b16-8d91-93f85f804dcd">
+                <CharitableDeduction>7654</CharitableDeduction>
+            </Overrides>
+            <Miscellaneous uuid="bc4ce842-21af-4a5a-859f-74f184e7b790">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="1087b50f-a32c-40db-8e65-4e41cfb9d3c3">
+                <GenericDescription>spouse gift to charity</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-07-01</DateOfGift>
+            <DateOfGiftInput>2016-07-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="163d25df-3b63-46f5-8436-9b384889ede5">
+            <DoneeInformation uuid="09215f53-ad6e-4a1c-93a1-2b308d6a02cc">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>15000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>14700</DonorsBasisInput>
+            <Elections uuid="302605ad-f053-4df2-ad0d-4f089787898f">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="ed4fbcf9-590a-4057-800e-5fcf51d2a59b">
+                <SubjectToGST>true</SubjectToGST>
+            </Overrides>
+            <Miscellaneous uuid="13c872d3-6351-4618-89f9-7b3006d96103">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="4c9c6496-c4a6-49d6-86c8-2ddbf71e3f8b">
+                <GenericDescription>Not sub. to GST</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-08-04</DateOfGift>
+            <DateOfGiftInput>2016-08-04</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="4f6f8935-e363-483a-93af-08929de44e8a">
+            <DoneeInformation uuid="7653b357-af8d-48a8-93f0-6f455af3032c">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>20000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>20000</DonorsBasisInput>
+            <Elections uuid="f278e3b6-f3ce-4d02-9210-05ccb2acbd57">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="2957b342-f15d-4655-b4ee-474aa05f3a32"></Overrides>
+            <Miscellaneous uuid="30888421-a7f6-414b-93ca-a9db248a73a5">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="7d1ea58e-e79a-472c-84dc-a0411911390b">
+                <GenericDescription>override exemption</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-10-10</DateOfGift>
+            <DateOfGiftInput>2016-10-10</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="1f0f6cb6-cad0-4250-8bb1-609b5ea30f0e">
+            <DoneeInformation uuid="9b210c00-2179-43e5-80af-908d08a038c2">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>21212</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>14521</DonorsBasisInput>
+            <Elections uuid="94067dac-00e7-47e0-bba5-82a79ee8a433">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="d6b78b6b-0e5f-497e-8732-b3e222197241"></Overrides>
+            <Miscellaneous uuid="13dabd58-d0f0-42bd-8220-a7ea0f7dfab5">
+                <DoNotUseOnForm709ThisYear>true</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="5020c373-91cf-430d-9dc9-95c793aa3aa4">
+                <GenericDescription>Do not use on 709 this year</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-07-01</DateOfGift>
+            <DateOfGiftInput>2016-07-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="26756b7d-a656-4f36-8355-7f3e23c3a6dd">
+            <DoneeInformation uuid="7511aa95-9ef0-46c6-ab21-234076978a48">
+                <DoneeIndex>2</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>8000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>7755</DonorsBasisInput>
+            <Elections uuid="e8694fcb-ba72-4abe-8354-45f1be41f861">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="d1d51cfe-f371-42a1-9ac0-326da1d99041"></Overrides>
+            <Miscellaneous uuid="950f192f-d51e-4fc4-8fe7-334061a57f54">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="f04c5114-95e4-4222-a293-87aec632d420">
+                <GenericDescription>gift to son</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-06-06</DateOfGift>
+            <DateOfGiftInput>2016-06-06</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="7562d596-1de8-4a21-87c7-ebf31fd43205">
+            <DoneeInformation uuid="37cd4883-2d42-49db-9a6a-c2a893cf8457">
+                <DoneeIndex>3</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>35000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>32500</DonorsBasisInput>
+            <Elections uuid="1f437863-5474-4629-8ca6-2372089d12b4">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="c59819ad-d21e-4ca8-8010-97177154005f"></Overrides>
+            <Miscellaneous uuid="b8dacfe6-c596-431a-b5c3-db7bcc5b5f0b">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="7ae26347-e47f-44c5-820b-05fab3c94b90">
+                <GenericDescription>gift to daughter - sub. to GST</GenericDescription>
+            </GiftDescriptions>
+            <DateOfGift>2016-07-07</DateOfGift>
+            <DateOfGiftInput>2016-07-07</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="c314a9b9-81f0-4e0c-91df-7d3dcf208799">
+            <DoneeInformation uuid="2b751699-f317-4f1c-94cd-67b6a251bc18">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>65400</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>47500</DonorsBasisInput>
+            <Overrides uuid="95b5b410-d318-4c40-884b-2aabced96ada"></Overrides>
+            <Miscellaneous uuid="7935945a-e974-450e-8084-dd6fe6d25afb">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="419ff015-1725-4e14-814f-488b654906b7">
+                <GenericDescription>Spouse Gift to GST</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <Elections uuid="d16aba82-1e1f-41a2-a56b-fb9167da05df">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGift>2016-04-01</DateOfGift>
+            <DateOfGiftInput>2016-04-01</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="0945d3d0-48b9-47ec-8b1a-d5493f9d455e">
+            <DoneeInformation uuid="587c104f-234e-4ee6-944f-d617db7416fa">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>50000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>31200</DonorsBasisInput>
+            <Overrides uuid="28c14b29-d010-4ee7-822b-bf6991f53f53"></Overrides>
+            <Miscellaneous uuid="c0942aeb-a6cf-4c4f-b369-7252cc2fc0f1">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="c80ad5f3-1b64-45e1-885d-3e85c55f9cbe">
+                <GenericDescription>Spouse gift to GST - elect out of 2632(c)</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <Elections uuid="bfca9c05-dc1b-4d56-9aba-7d429ebf6ff5">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>true</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectOutOfCurrentTransfer</ElectOutPart2632c>
+            </Elections>
+            <DateOfGift>2016-11-11</DateOfGift>
+            <DateOfGiftInput>2016-11-11</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="804db27d-ae7c-4da3-bf0e-c03fa325098c">
+            <DoneeInformation uuid="5b8aa1c4-9925-4abf-b0ea-1ba0c3d7e4b0">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>35000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>12500</DonorsBasisInput>
+            <Overrides uuid="c89a9df7-bf8c-452e-89fe-e977154c27c2"></Overrides>
+            <Miscellaneous uuid="0d39c641-bb19-46cb-85e7-cf316d507663">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="c77b651e-3a0f-4661-8871-b3ee85083ef6">
+                <GenericDescription>Spouse gift to Granddaughter - elect out of 2632(b)</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <Elections uuid="b53f484f-97fe-4a6e-82b2-57ed479aa8cc">
+                <ElectOutPart2-2632bAlloc>true</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGift>2016-08-08</DateOfGift>
+            <DateOfGiftInput>2016-08-08</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="a3b49297-d518-4c5b-84e3-27ef77a33e4f">
+            <DoneeInformation uuid="eca5b0c5-3fbc-4e52-8c1e-251958ce092e">
+                <DoneeIndex>4</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>50000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>50000</DonorsBasisInput>
+            <Overrides uuid="baf70f9d-3785-4b78-85e7-a4236e6d9ae6"></Overrides>
+            <Miscellaneous uuid="ae27b755-2e47-431f-b2bb-1db158d0f6b4">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="8af3518f-3e61-44c0-876c-9018434ae462">
+                <GenericDescription>Gift to charity</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <Elections uuid="944826dc-8dc7-4dd4-8e5e-f1d7d5ad1e47">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGift>2016-12-12</DateOfGift>
+            <DateOfGiftInput>2016-12-23</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="39523b17-eec4-40bc-82c2-83058840cd93">
+            <DoneeInformation uuid="f5602a6a-e448-4476-a6bf-9a7ec5aceb82">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>40000</FairMarketValueInput>
+            <TypeOfGift>Generic</TypeOfGift>
+            <DonorsBasisInput>35353</DonorsBasisInput>
+            <Overrides uuid="2caa920d-df7d-4adb-a179-4e39a2e6a76e"></Overrides>
+            <Miscellaneous uuid="3cfbd2ab-3457-44b4-a600-37fb508d93db">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <GiftDescriptions uuid="1d433780-ed6a-4e3e-8e1c-1e4078d85d68">
+                <GenericDescription>Another spouse&apos;s gift to skip person</GenericDescription>
+            </GiftDescriptions>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <Elections uuid="2781a7b8-2d3d-44a5-8b43-727dfb00603e">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <DateOfGift>2016-12-31</DateOfGift>
+            <DateOfGiftInput>2016-12-31</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="fce34cc4-0051-4e74-8c14-3a2f5ab286c7">
+            <DoneeInformation uuid="92974f3f-7fb1-4530-a94a-171e79264424">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>3500</FairMarketValueInput>
+            <TypeOfGift>Cash</TypeOfGift>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <Elections uuid="e3ef6c99-7999-4835-968b-f8c5686155ad">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Overrides uuid="d1695cc2-a614-44b7-813f-135f7e4e86b3"></Overrides>
+            <Miscellaneous uuid="a935c14e-05d5-401a-99c9-82b9ac661663">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <DateOfGift>2016-12-25</DateOfGift>
+            <DateOfGiftInput>2016-12-28</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="2d1cacde-47d5-4f44-8276-60c24594ca6b">
+            <TypeOfGift>Cash</TypeOfGift>
+            <DoneeInformation uuid="194381ab-40eb-44b1-81f7-e5784ffd0465">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>3501</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGift>2016-12-25</DateOfGift>
+            <Elections uuid="36c0736f-f736-4e7c-995b-c2aab7a1daae">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="883f1b23-5d7b-409e-9d7f-72152a6406ac">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="2c775cc8-f8b5-4262-9802-92911de29485"></Overrides>
+            <DateOfGiftInput>2016-12-25</DateOfGiftInput>
+        </GiftPP>
+        <GiftPP uuid="737da0a0-8e13-4e51-8443-d8362b55634e">
+            <TypeOfGift>Cash</TypeOfGift>
+            <DoneeInformation uuid="a25815dc-896a-4735-9e71-b414a870649b">
+                <DoneeIndex>3</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>350000</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGiftInput>2016-09-26</DateOfGiftInput>
+            <Elections uuid="e3139a8d-0bda-4526-83d0-4a0da8ff3383">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="6ceb1de5-3f04-4cad-b1b6-f226d5d4a65e">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="2da8d095-6219-45ba-b223-4e54a25320c3"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="acd3fbc5-e346-488c-89c5-d91f81224171">
+            <TypeOfGift>Real estate</TypeOfGift>
+            <DoneeInformation uuid="0731713c-f765-4f86-9614-3a0572edbdf5">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>63944</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="b7400dab-1528-4a6c-ae7f-78bb378f9b7d">
+                <RealEstate uuid="83c18de4-2a01-4915-bac1-4c22ea7b8293">
+                    <USAddress uuid="58f9314d-724f-4b49-8d74-a9db4babd804"></USAddress>
+                </RealEstate>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-01-23</DateOfGiftInput>
+            <Elections uuid="cda13b32-bee6-44d8-a398-37ffce3a918c">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="0296f0cc-a4c8-455f-b8c6-c885ed564396">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="e6c8de90-ec82-4be6-b6ae-178dbdf37f8a"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="6704af18-6c4d-40ed-8ea6-ce39790c8147">
+            <TypeOfGift>Stocks</TypeOfGift>
+            <DoneeInformation uuid="aee61068-78d5-4907-83c4-8a42fb4bd426">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>45888</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="d9e11503-6b7f-4acf-96d4-5f2a17ab2d1b">
+                <Stocks uuid="d3160410-72d8-4bac-8da4-c6a2c026e79f"></Stocks>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-01-23</DateOfGiftInput>
+            <Elections uuid="334e3ae5-d7ae-4edb-992b-4653e2d57021">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="ac75acfc-9cdc-430b-a68b-d03b2a694d1c">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="c32f60eb-e66a-4071-a29a-ef01254c7746"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="c03f9203-8b14-4179-8d27-89b9bd620f83">
+            <TypeOfGift>Generic</TypeOfGift>
+            <DoneeInformation uuid="cd6707a9-5048-4d24-97bc-db2b30ec5566">
+                <DoneeIndex>2</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>78144</FairMarketValueInput>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DateOfGiftInput>2016-06-25</DateOfGiftInput>
+            <Elections uuid="891decf1-3d4d-4d54-b8b3-572cda5decdc">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="50b45946-befa-49fb-8370-581a6919febf">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="15de3edb-c11c-4634-bab0-3d81cb4b2654"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="6765c349-f494-422c-b1d9-fbe2e8ffbd5b">
+            <TypeOfGift>Real estate</TypeOfGift>
+            <DoneeInformation uuid="55e9b0ce-1752-40cd-be87-bb1cb5b2d35f">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>784545</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="2addd831-bbba-4223-97c0-371fe02c14a2">
+                <RealEstate uuid="710077ee-58d7-4a6c-9df3-20f4b3bb8626">
+                    <USAddress uuid="0f7cdf9c-d714-400c-8997-72019266a516"></USAddress>
+                </RealEstate>
+            </GiftDescriptions>
+            <DonorsBasisInput>7896366</DonorsBasisInput>
+            <DateOfGiftInput>2016-03-26</DateOfGiftInput>
+            <Elections uuid="9e042aa5-152b-444d-b956-51242a2ca63f">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="1026157c-4a5a-415e-82ab-aa83b95d8288">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="744faabf-0206-4553-83a9-2d6833804557"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="8e9aa66a-8c6a-4d7f-8364-ceeac70efcdc">
+            <TypeOfGift>Life insurance policies</TypeOfGift>
+            <DoneeInformation uuid="073df498-3f33-4c32-8107-4a2945ab5a6b">
+                <DoneeIndex>3</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>4562</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>3125</DonorsBasisInput>
+            <DateOfGiftInput>2016-09-23</DateOfGiftInput>
+            <Elections uuid="95705d47-88b3-4706-8dd9-0f8a33803d8f">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="e4bf7326-3a92-46e5-b8f5-3bf740b5f9b4">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="3380fe5e-16bf-48cd-9132-83fbee703f21"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="58fe88e1-b51d-4fe0-8cae-c55382fecfa8">
+            <TypeOfGift>529 Plan</TypeOfGift>
+            <DoneeInformation uuid="66c6a9e7-f121-4196-a14b-1b0db32a161c">
+                <DoneeIndex>2</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>78900</FairMarketValueInput>
+            <GiftFromSpouse>true</GiftFromSpouse>
+            <DonorsBasisInput>459600</DonorsBasisInput>
+            <DateOfGiftInput>2016-12-13</DateOfGiftInput>
+            <Elections uuid="fb8f285b-3dff-49fe-9e6a-adcbdad6fca6">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="7967d6cb-4d07-42b2-89fc-7733975fe9b0">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="829e79e3-e2b3-4575-83fa-99a62aca3af3"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="6a2bc7b4-2414-4649-acfd-a73e8f0e8264">
+            <TypeOfGift>Tangible personal property</TypeOfGift>
+            <DoneeInformation uuid="cb6ca152-f4e7-45c7-b632-78fe1ade4717">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>784560</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>230000</DonorsBasisInput>
+            <DateOfGiftInput>2016-08-01</DateOfGiftInput>
+            <Elections uuid="86dd9ed7-6c3f-4761-83b4-b4f8eb9c8126">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="71ac869e-f6be-4a00-85af-30e551fa26d5">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="c2530a74-5446-4599-8eff-03f4f5627421"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="5501680b-5dfd-47fe-892a-6e9132b278da">
+            <TypeOfGift>Generic</TypeOfGift>
+            <DoneeInformation uuid="bcdffe4b-8a33-4b00-8077-28c76d2ff361">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>1245</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>125</DonorsBasisInput>
+            <DateOfGiftInput>2016-04-12</DateOfGiftInput>
+            <Elections uuid="c266b8b8-a3aa-4daa-bd0f-d63abaffc8f1">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="ceda1dab-8d70-428b-8450-44b9ebdf7d2d">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="dce5dbd8-e9a5-4795-8e45-30b68c53cb44"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="6ff31db8-5fae-453f-978d-bbcd8cc406bc">
+            <TypeOfGift>Real estate</TypeOfGift>
+            <DoneeInformation uuid="62844f82-ec3d-4ff6-842d-12da6e976cb9">
+                <DoneeIndex>1</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>45899</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="b50e7b33-8856-4215-bcc5-a4cc2978b50c">
+                <RealEstate uuid="1a021e5b-1ee1-4c3b-9f03-905e4260dc6e">
+                    <USAddress uuid="a432c178-0bda-433b-9dde-119226548870"></USAddress>
+                </RealEstate>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-01-23</DateOfGiftInput>
+            <Elections uuid="74b4f776-ffda-4849-b279-e703cc5f22de">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>true</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="87fc7f3f-d458-4dce-8b47-5de29685a562">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="6ecbe99c-a384-4900-8913-077527cff2af"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="aaf609b5-5090-48d7-8477-f537e887e2f5">
+            <TypeOfGift>Cash</TypeOfGift>
+            <DoneeInformation uuid="10e10437-dbb3-456c-baf6-bbdfa6168c02">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>78910</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>78911</DonorsBasisInput>
+            <DateOfGiftInput>2016-02-03</DateOfGiftInput>
+            <Elections uuid="2ea88a09-2479-4d59-9b32-359511fa8ed9">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectOutOfCurrentTransfer</ElectOutPart2632c>
+            </Elections>
+            <Miscellaneous uuid="707bbb68-5a4c-462f-8126-2e1be5b8770e">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="3d7252fe-0f40-4a60-9a54-633c2a452235"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="881279ef-d545-484a-8a4f-f8de1789617b">
+            <TypeOfGift>Life insurance policies</TypeOfGift>
+            <DoneeInformation uuid="97189610-477e-4e82-8c8d-3f3f6c8eee0f">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>2032016</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGiftInput>2016-06-23</DateOfGiftInput>
+            <Elections uuid="0ac8ffe0-54ba-4c50-a5aa-a7e84203a883">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectTreatAnyTrustAsGST</ElectOutPart2632c>
+            </Elections>
+            <Miscellaneous uuid="b05459aa-f2bd-4014-8a8e-18e586e1fa36">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="cdf6ea66-cbca-443b-8c29-65e4c2310777"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="f291de5c-bdae-437a-86b0-ce378d88705e">
+            <TypeOfGift>Generic</TypeOfGift>
+            <DoneeInformation uuid="8bf03bf6-f381-4ce3-8ba2-ff82c95e32a9">
+                <DoneeIndex>4</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>458900</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGiftInput>2016-10-10</DateOfGiftInput>
+            <Elections uuid="bbee33e9-0afb-4bec-a4b3-e75e87da7089">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="e8f46fce-95fa-4f68-82f3-e12e8645f44e">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="faf68d80-dede-4ec5-8b76-833607d805ef"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="24db9159-7b44-4d11-8f71-ec5f9bcc1b04">
+            <TypeOfGift>Bonds</TypeOfGift>
+            <DoneeInformation uuid="bfcc9924-b221-4157-bd57-c31fd1329fd6">
+                <DoneeIndex>6</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>45000</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="fa425ed5-c4c5-455f-8888-be8b37261e72">
+                <Bonds uuid="9b983c05-3ed2-4da2-b6c6-8301d37a4275"></Bonds>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-11-12</DateOfGiftInput>
+            <Elections uuid="46c38c7c-50de-44fc-95d0-d53234a58ec0">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="c16ffd20-520a-45da-89b0-77f180606ea5">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="990d8bc5-97f6-48d1-a8a7-623d3c6cea1d"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="9250b7a2-ab53-422a-8bde-8ac652f97c63">
+            <TypeOfGift>529 Plan</TypeOfGift>
+            <DoneeInformation uuid="53f4a5a7-d05b-4fdb-b69e-788d747b3de7">
+                <DoneeIndex>5</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>45889</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGiftInput>2016-12-31</DateOfGiftInput>
+            <Elections uuid="6d545611-4a38-4142-88a8-4fde04974f43">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="00f718e2-dfe8-4010-8de8-0ed50088bdef">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="3de6fb82-dd66-41e1-8492-631453d92a4d"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="d2fed35c-02bf-413c-a83f-63df86458e4b">
+            <TypeOfGift>Tangible personal property</TypeOfGift>
+            <DoneeInformation uuid="b7a72038-8616-4b7f-8372-db982d33f042">
+                <DoneeIndex>7</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>78788</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DateOfGiftInput>2016-06-23</DateOfGiftInput>
+            <Elections uuid="60476f0c-b901-48f1-93ae-84d7b573fe90">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectOutOfAllFutureTransfers</ElectOutPart2632c>
+            </Elections>
+            <Miscellaneous uuid="0c1056a8-0e7e-426e-a099-b8bd4cd9d47b">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="d9b45ce9-45ad-4845-9091-da9a8ca497c9"></Overrides>
+        </GiftPP>
+        <GiftPP uuid="82c1b827-8c72-4197-9b70-5eebf60185db">
+            <TypeOfGift>Life insurance policies</TypeOfGift>
+            <DoneeInformation uuid="7202d3d0-2da4-43cc-abef-462db855fb13">
+                <DoneeIndex>9</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>12540</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>11100</DonorsBasisInput>
+            <DateOfGiftInput>2016-09-15</DateOfGiftInput>
+            <Elections uuid="4f027520-751b-4046-8662-026baf792a1f">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectOutOfCurrentTransfer</ElectOutPart2632c>
+            </Elections>
+            <Miscellaneous uuid="cdcf1114-4b69-4e9e-9e8f-978b469f6e63">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="fd9f9deb-fea6-4945-8521-a5e520d46ead"></Overrides>
+            <GiftDescriptions uuid="54d77125-3e0e-4c12-86d1-d5785bd81ae3">
+                <LifeInsurancePolicies uuid="8003e281-f78e-43b7-8746-64071997344d"></LifeInsurancePolicies>
+            </GiftDescriptions>
+        </GiftPP>
+        <GiftPP uuid="43707c49-9a24-43ef-8d76-029d5804b654">
+            <TypeOfGift>Real estate</TypeOfGift>
+            <DoneeInformation uuid="19b18244-0d75-47f1-a57e-6a7f458e57e0">
+                <DoneeIndex>8</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>123565</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <GiftDescriptions uuid="2d10c469-6d7a-4df1-8f1d-7a35fc3f2073">
+                <RealEstate uuid="494e940e-da43-4947-81cd-1bace5e6a350">
+                    <USAddress uuid="ac322810-98e5-436d-bd9b-a028c0d14946"></USAddress>
+                </RealEstate>
+            </GiftDescriptions>
+            <DateOfGiftInput>2016-06-12</DateOfGiftInput>
+            <Elections uuid="3940ce3a-55ee-4bef-9044-bd0c25303091">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>false</SpecialQTIPElection2652a3>
+                <ElectOutPart2632c>ElectTreatAnyTrustAsGST</ElectOutPart2632c>
+            </Elections>
+            <Miscellaneous uuid="c622d41a-cab0-4572-82c1-3b29fb561ffd">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="120507d3-46af-4cbc-817e-637d1fc06eab"></Overrides>
+            <DonorsBasisInput>23569</DonorsBasisInput>
+        </GiftPP>
+        <GiftPP uuid="4bbaad81-e293-492f-8ead-178d63ab7929">
+            <TypeOfGift>Generic</TypeOfGift>
+            <DoneeInformation uuid="e15d10de-ff21-4d1f-8762-a2304cba5919">
+                <DoneeIndex>10</DoneeIndex>
+            </DoneeInformation>
+            <FairMarketValueInput>1212515</FairMarketValueInput>
+            <GiftFromSpouse>false</GiftFromSpouse>
+            <DonorsBasisInput>7878</DonorsBasisInput>
+            <DateOfGiftInput>2016-02-13</DateOfGiftInput>
+            <Elections uuid="5c144ba2-4282-4b27-8f47-66c77738c9fd">
+                <ElectOutPart2-2632bAlloc>false</ElectOutPart2-2632bAlloc>
+                <ElectOutPart2632c>ElectOutOfAllFutureTransfers</ElectOutPart2632c>
+                <QTIPElectOut2523f6>false</QTIPElectOut2523f6>
+                <SpecialQTIPElection2652a3>true</SpecialQTIPElection2652a3>
+            </Elections>
+            <Miscellaneous uuid="7d4862f0-5f87-4084-8933-063240fd0802">
+                <DoNotUseOnForm709ThisYear>false</DoNotUseOnForm709ThisYear>
+            </Miscellaneous>
+            <Overrides uuid="bc0d80f0-9580-4083-870c-0c604a94b0d2"></Overrides>
+        </GiftPP>
+        <PenaltiesAndInterest uuid="38940233-c25e-44f0-9650-6776712a9833">
+            <Interest>100</Interest>
+            <LateFilingOfReturn>200</LateFilingOfReturn>
+            <LatePaymentOfTax>300</LatePaymentOfTax>
+        </PenaltiesAndInterest>
+        <IRS2848 uuid="1604cfe8-7db9-4af7-8d17-137c341fccfc">
+            <Representatives uuid="7cfaf885-f4ca-4384-b738-16a963490ad7">
+                <USAddress uuid="912679dc-ae28-47f5-98bf-9bbf75e692d2">
+                    <AddressLine1Txt>5601 Headquarters streeeeeeeeeeeeet</AddressLine1Txt>
+                    <CityNm>Plano Representative 1</CityNm>
+                    <StateAbbreviationCd>TX</StateAbbreviationCd>
+                    <ZIPCd>75024-0111</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>true</GetCopiesOfCommunication>
+                <NewAddress>true</NewAddress>
+                <NewTelephoneNo>true</NewTelephoneNo>
+                <NewFaxNo>true</NewFaxNo>
+                <RepresentativeName>Legal name of Representative Numb 1</RepresentativeName>
+                <CAFNo>caf11111111119</CAFNo>
+                <PTIN>P11111119</PTIN>
+                <TelephoneNo>(214) 387-1119</TelephoneNo>
+                <FaxNo>(214) 999-1111</FaxNo>
+                <Designation>B</Designation>
+                <LicensingJur>jur11111111111111111111119</LicensingJur>
+                <CertificationNo>lic11111111111111111111119</CertificationNo>
+            </Representatives>
+            <Representatives uuid="171c8e6a-efd6-4994-8e06-83583cf3fb58">
+                <USAddress uuid="f5cab776-767a-401a-bc1c-5a7c6e37f3bd">
+                    <AddressLine1Txt>5601 Headquarters streeeeeeeeeeeeet</AddressLine1Txt>
+                    <CityNm>Plano 2</CityNm>
+                    <StateAbbreviationCd>CA</StateAbbreviationCd>
+                    <ZIPCd>75024-0002</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>false</GetCopiesOfCommunication>
+                <NewAddress>true</NewAddress>
+                <NewTelephoneNo>false</NewTelephoneNo>
+                <NewFaxNo>true</NewFaxNo>
+                <RepresentativeName>Representative 2 has a longer name</RepresentativeName>
+                <CAFNo>caf22222222229</CAFNo>
+                <PTIN>P22222229</PTIN>
+                <TelephoneNo>(214) 387-2229</TelephoneNo>
+                <FaxNo>(214) 999-2229</FaxNo>
+                <Designation>A</Designation>
+                <LicensingJur>jur22222222222222222222229</LicensingJur>
+                <CertificationNo>lic22222222222222222222229</CertificationNo>
+            </Representatives>
+            <Representatives uuid="4998697c-26e6-479b-9641-75224d56f38f">
+                <RepresentativeName>Representative 3 is verbose &amp; wordy</RepresentativeName>
+                <USAddress uuid="a49be9f5-0806-4492-83dc-581bed94e0bf">
+                    <AddressLine1Txt>5601 Headquarters streeeeeeeeeeet</AddressLine1Txt>
+                    <CityNm>Plano three</CityNm>
+                    <StateAbbreviationCd>CO</StateAbbreviationCd>
+                    <ZIPCd>75024-0003</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>true</GetCopiesOfCommunication>
+                <CAFNo>caf33333333339</CAFNo>
+                <PTIN>P33333339</PTIN>
+                <TelephoneNo>(214) 387-3339</TelephoneNo>
+                <FaxNo>(214) 999-3339</FaxNo>
+                <Designation>C</Designation>
+                <LicensingJur>jur33333333333333333333339</LicensingJur>
+                <CertificationNo>lic33333333333333333333339</CertificationNo>
+                <NewAddress>false</NewAddress>
+                <NewTelephoneNo>true</NewTelephoneNo>
+                <NewFaxNo>false</NewFaxNo>
+            </Representatives>
+            <Representatives uuid="b5e1657e-fa76-447b-8c39-a95498bbef35">
+                <RepresentativeName>Representative #4 has an odd nameez</RepresentativeName>
+                <USAddress uuid="c81c461d-4284-4f69-9f8f-f2cf7e5c4190">
+                    <AddressLine1Txt>5601 Headquarters 4streeeeeeeeeeet</AddressLine1Txt>
+                    <CityNm>Plano 4</CityNm>
+                    <StateAbbreviationCd>CT</StateAbbreviationCd>
+                    <ZIPCd>75024-0004</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>false</GetCopiesOfCommunication>
+                <CAFNo>caf44444444449</CAFNo>
+                <PTIN>P44444449</PTIN>
+                <TelephoneNo>(214) 387-4449</TelephoneNo>
+                <FaxNo>(214) 999-4449</FaxNo>
+                <Designation>E</Designation>
+                <LicensingJur>license4444444444444444449</LicensingJur>
+                <CertificationNo>bar44444444444444444444449</CertificationNo>
+                <NewAddress>true</NewAddress>
+                <NewTelephoneNo>true</NewTelephoneNo>
+                <NewFaxNo>true</NewFaxNo>
+            </Representatives>
+            <PrintWithReturns>Both</PrintWithReturns>
+            <SpecificUseNotRecorded>true</SpecificUseNotRecorded>
+            <AuthorizeDiscToThirdParty>true</AuthorizeDiscToThirdParty>
+            <SignDueToDiseaseInjury>true</SignDueToDiseaseInjury>
+            <SignDueToAbsenceUS>true</SignDueToAbsenceUS>
+            <SignPermissionGranted>true</SignPermissionGranted>
+            <SubOrAddReps>true</SubOrAddReps>
+            <RetentionRevocationInd>true</RetentionRevocationInd>
+            <OtherActsAuthorized>false</OtherActsAuthorized>
+            <ActsAuthorized uuid="99f1f94d-fe44-4f99-850b-da8bfad1e700">
+                <DescOfMatter>first type of tax Matter#1</DescOfMatter>
+                <TaxFormNo>1010-111 Form numberrrrrrrrrs</TaxFormNo>
+                <YearsOrPeriods>Year or Period #1</YearsOrPeriods>
+            </ActsAuthorized>
+            <ActsAuthorized uuid="90d52227-7982-41f6-89be-5a465dd20285">
+                <DescOfMatter>second type of tax Matter#</DescOfMatter>
+                <TaxFormNo>2020-222 Form numberrrrrrrrrs</TaxFormNo>
+                <YearsOrPeriods>Year or Period #2</YearsOrPeriods>
+            </ActsAuthorized>
+            <ActsAuthorized uuid="71d5e9a6-cb58-47a9-81e6-1af55ec0a7ba">
+                <DescOfMatter>third type of tax Matter#3</DescOfMatter>
+                <TaxFormNo>3030-333 Form numberrrrrrrrrs</TaxFormNo>
+                <YearsOrPeriods>Year or Period #3</YearsOrPeriods>
+            </ActsAuthorized>
+            <SpecificActsDeletions>Deletions are listed below: 1. yours 2. mine 3. ours 4. eveerything else!! blah, blah .......................blah, blah</SpecificActsDeletions>
+            <OtherActsDescription>other acts description blah, blah ................................................................................................................................................................................ blah, blahx</OtherActsDescription>
+        </IRS2848>
+        <IRS8821 uuid="d456e7e7-39e4-49a2-9efd-52c4c819be87">
+            <Appointees uuid="66dfd6e0-baf5-481c-8e5c-7e706b03fc16">
+                <RepresentativeName>CPA First preparer self-employed</RepresentativeName>
+                <USAddress uuid="3ad9171a-fa41-4645-b227-73261f10017a">
+                    <AddressLine1Txt>5601 Headquarters appointee 1</AddressLine1Txt>
+                    <CityNm>Appointee 1 city</CityNm>
+                    <StateAbbreviationCd>AL</StateAbbreviationCd>
+                    <ZIPCd>12340-0001</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>true</GetCopiesOfCommunication>
+                <CAFNo>CAF11112222333</CAFNo>
+                <PTIN>P11122233</PTIN>
+                <TelephoneNo>(214) 111-1111</TelephoneNo>
+                <FaxNo>(214) 387-2710</FaxNo>
+                <NewAddress>true</NewAddress>
+                <NewTelephoneNo>true</NewTelephoneNo>
+                <NewFaxNo>true</NewFaxNo>
+            </Appointees>
+            <Appointees uuid="8f09fda2-9f0a-4237-9e31-5d3f3ea979dc">
+                <RepresentativeName>Enrolled agent preparer two for prt</RepresentativeName>
+                <USAddress uuid="35db46a5-6c4c-402d-a811-06c991c72e0e">
+                    <AddressLine1Txt>5601 Headquarters for appointee2</AddressLine1Txt>
+                    <CityNm>Appointee two city</CityNm>
+                    <StateAbbreviationCd>AK</StateAbbreviationCd>
+                    <ZIPCd>12345-0002</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>false</GetCopiesOfCommunication>
+                <CAFNo>CAF22223333444</CAFNo>
+                <PTIN>P22334455</PTIN>
+                <TelephoneNo>(972) 222-2222</TelephoneNo>
+                <FaxNo>(214) 387-2710</FaxNo>
+                <NewAddress>true</NewAddress>
+                <NewTelephoneNo>false</NewTelephoneNo>
+                <NewFaxNo>true</NewFaxNo>
+            </Appointees>
+            <Appointees uuid="d8de98f1-cd27-4b4c-89d0-e24ba20dabce">
+                <RepresentativeName>Unenrolled agent - appointee three</RepresentativeName>
+                <USAddress uuid="d265f1b5-3a80-45d7-a844-fbd3ff6ef604">
+                    <AddressLine1Txt>5601 Headquarters - appointee 3</AddressLine1Txt>
+                    <CityNm>appointee three city</CityNm>
+                    <StateAbbreviationCd>AZ</StateAbbreviationCd>
+                    <ZIPCd>12345-6003</ZIPCd>
+                </USAddress>
+                <GetCopiesOfCommunication>true</GetCopiesOfCommunication>
+                <CAFNo>CAF33334444555</CAFNo>
+                <PTIN>P33445566</PTIN>
+                <TelephoneNo>(972) 333-3333</TelephoneNo>
+                <FaxNo>(214) 387-2710</FaxNo>
+                <NewAddress>false</NewAddress>
+                <NewTelephoneNo>true</NewTelephoneNo>
+                <NewFaxNo>false</NewFaxNo>
+            </Appointees>
+            <ActsAuthorized uuid="ef81b80a-541e-4473-ac0a-febe347c41cb">
+                <DescOfMatter>Gift Tax and other tax mat</DescOfMatter>
+                <TaxFormNo>709, 2848, 8821</TaxFormNo>
+                <YearsOrPeriods>1999 - 2005</YearsOrPeriods>
+            </ActsAuthorized>
+            <ActsAuthorized uuid="30c3b7bf-f980-4cfd-92a8-cdfd557850a6">
+                <DescOfMatter>2nd Tax Matter xxxxxxxxend</DescOfMatter>
+                <TaxFormNo>1234, 5678, 6789.1470, xxxend</TaxFormNo>
+                <YearsOrPeriods>2001 only</YearsOrPeriods>
+            </ActsAuthorized>
+            <ActsAuthorized uuid="471be788-d6d0-4c65-899a-2636480def38">
+                <DescOfMatter>Anything else not previous</DescOfMatter>
+                <TaxFormNo>All of the above</TaxFormNo>
+                <YearsOrPeriods>2000 and 2001</YearsOrPeriods>
+            </ActsAuthorized>
+            <PrintWithReturns>Both</PrintWithReturns>
+            <SpecificUseNotRecorded>true</SpecificUseNotRecorded>
+            <CopiesToAppointees>true</CopiesToAppointees>
+            <RetentionRevocationInd>true</RetentionRevocationInd>
+        </IRS8821>
+        <SupplementalForms uuid="175f1a41-59cd-4743-9349-278a45fe3c36">
+            <IRS8821 uuid="5db51541-6941-40f6-870b-956866441057">
+                <PrintWithReturns>Taxpayer</PrintWithReturns>
+            </IRS8821>
+            <IRS2848 uuid="c31a7946-a57a-4797-94e5-7394036557ed">
+                <PrintWithReturns>Taxpayer</PrintWithReturns>
+            </IRS2848>
+            <IRS8275 uuid="bd7acacb-736d-4b4e-898a-4b4317ff26b8"></IRS8275>
+            <IRS8275R uuid="831b6cc3-c612-4e40-a211-1d2d253e95a9"></IRS8275R>
+        </SupplementalForms>
+        <IRS8275 uuid="b555db2a-4e2f-4c11-88c8-5a7543f100ae">
+            <ForeignEntityIdentificationGrp uuid="51a63934-458d-47dd-8c5e-3d89c7628061"></ForeignEntityIdentificationGrp>
+            <ForeignEntityName uuid="e76f4d83-937e-43c0-8f1b-0d1076bb3666"></ForeignEntityName>
+            <PassThroughEntityHasIndivNm>false</PassThroughEntityHasIndivNm>
+            <PassThroughEntityBusName uuid="0394fb78-26d9-4da5-8acb-1c4118d7b1df"></PassThroughEntityBusName>
+            <PassThroughEntityHasFrgnAddress>false</PassThroughEntityHasFrgnAddress>
+            <PassThroughEntityUSAddress uuid="556610a0-1222-463a-8200-938610a42340"></PassThroughEntityUSAddress>
+        </IRS8275>
+        <IRS8275R uuid="165beb4a-dc83-4d6f-b00f-fb6078c59344">
+            <ForeignEntityIdentificationGrp uuid="559d0471-7555-4167-880d-0dede693bf58"></ForeignEntityIdentificationGrp>
+            <ForeignEntityName uuid="e3606db1-bc40-4c44-b10a-9a2592af1850"></ForeignEntityName>
+            <PassThroughEntityHasIndivNm>false</PassThroughEntityHasIndivNm>
+            <PassThroughEntityBusName uuid="41b6f2b3-8273-4ba3-ac93-5e6e4250a3b6"></PassThroughEntityBusName>
+            <PassThroughEntityHasFrgnAddress>false</PassThroughEntityHasFrgnAddress>
+            <PassThroughEntityUSAddress uuid="153f43ef-23eb-44ae-941d-26ffce16ad5e"></PassThroughEntityUSAddress>
+        </IRS8275R>
+    </ReturnPP>
+    <ReturnHeader uuid="a40c8e48-ffb8-4dcb-8e69-b435d5711e2e">
+        <PaidPreparerInformationGrp uuid="4cec211c-f093-424b-99bd-5874336a457d">
+            <PreparerFirmName uuid="9d978c1c-cc0e-47b0-802b-bc5a9d4694e5">
+                <BusinessNameLine1Txt>APD Academy</BusinessNameLine1Txt>
+            </PreparerFirmName>
+            <PreparerFirmEIN>75-1234567</PreparerFirmEIN>
+            <PreparerUSAddress uuid="da085846-e98e-4e4a-875b-3f174e319e0d">
+                <AddressLine1Txt>5601 HEADQUARTERS DR,SUITE 115</AddressLine1Txt>
+                <CityNm>PLANO</CityNm>
+                <StateAbbreviationCd>TX</StateAbbreviationCd>
+                <ZIPCd>75024-5839</ZIPCd>
+            </PreparerUSAddress>
+            <PhoneNum>(214) 387-2000</PhoneNum>
+            <PreparerPersonNm>THIRD</PreparerPersonNm>
+            <PreparerSSN>723456789</PreparerSSN>
+            <SelfEmployedInd>true</SelfEmployedInd>
+            <PTIN>P12345678</PTIN>
+        </PaidPreparerInformationGrp>
+        <TaxpayerPP uuid="70068cd9-09e7-4612-8175-4764b288a0f1"></TaxpayerPP>
+        <SpousePP uuid="a84eb218-a9c2-4092-a355-c4c065621c75"></SpousePP>
+        <Filer uuid="26096c07-0597-4b50-8e0b-7d39ed5f8743">
+            <DiscussWithPaidPreparerInd uuid="4f8a6875-5ca4-4ed3-8b0d-f86598799e5b"></DiscussWithPaidPreparerInd>
+        </Filer>
+    </ReturnHeader>
+</Return>

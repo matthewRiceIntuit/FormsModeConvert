@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Return structure="group">
+  <Header structure="group"/>
+  <Data structure="group">
+    <fdgp1 structure="form">
+      <UnifiedTransferTax baseType="xsd:integer" structure="field" type="xsd:integer"></UnifiedTransferTax>
+      <L1 baseType="xsd:integer" structure="field" type="USAmountType"></L1>
+      <L2 baseType="xsd:integer" structure="field" type="USAmountType"></L2>
+      <L3 baseType="xsd:integer" structure="field" type="USAmountType"></L3>
+      <L4 baseType="xsd:integer" structure="field" type="USAmountType"></L4>
+      <L5 baseType="xsd:integer" structure="field" type="USAmountType"></L5>
+      <L6 baseType="xsd:integer" structure="field" type="USAmountType"></L6>
+      </fdgp1 >
+    </Data>
+</Return>

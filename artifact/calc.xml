@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Nodes topic="FDGP1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="TKE_Calc_Graph.xsd" >
+
+  <Versions>
+    <Version id="TKE.Calc.Runtime">1</Version>
+    <Version id="TKE.Calc.FileFormat">6</Version>
+    <Version id="TKE.Gist">1</Version>
+    <Version id="TKE.MeF">1</Version>
+  </Versions>
+
+  <Node name="/Return/Data/fdgp1/L3">
+    <Inputs>
+      <Input>/Return/Data/fdgp1/L1</Input>
+      <Input>/Return/Data/fdgp1/L2</Input>
+    </Inputs>
+    <Gist>
+      <Accumulation>
+        <InputRoles>
+          <Value>/Return/Data/fdgp1/L1</Value>
+          <Value>/Return/Data/fdgp1/L2</Value>
+        </InputRoles>
+        <Configuration>
+          <Type>UNKNOWN</Type>
+        </Configuration>
+      </Accumulation>
+      <PostProcessing>
+        <RoundTo>
+          <Dollars/>
+        </RoundTo>
+        <ZeroIfBlank/>
+      </PostProcessing>
+    </Gist>
+  </Node>
+
+  <Node name="/Return/Data/fdgp1/L4">
+    <Inputs>
+      <Input>/Return/Data/fdgp1/L1</Input>
+      <Input>/Return/Data/fdgp1/UnifiedTransferTax</Input>
+    </Inputs>
+    <Gist>
+      <PercentageOf>
+        <InputRoles>
+          <Value>/Return/Data/fdgp1/L1</Value>
+          <Percentage>/Return/Data/fdgp1/UnifiedTransferTax</Percentage>
+        </InputRoles>
+        <Configuration>
+          <ValueType>Income</ValueType>
+          <OutputType>Percentage</OutputType>
+        </Configuration>
+      </PercentageOf>
+      <PostProcessing>
+        <RoundTo>
+          <Dollars/>
+        </RoundTo>
+        <ZeroIfBlank/>
+      </PostProcessing>
+    </Gist>
+  </Node>
+
+  <Node name="/Return/Data/fdgp1/L5">
+    <Inputs>
+      <Input>/Return/Data/fdgp1/L2</Input>
+      <Input>/Return/Data/fdgp1/UnifiedTransferTax</Input>
+    </Inputs>
+    <Gist>
+      <PercentageOf>
+        <InputRoles>
+          <Value>/Return/Data/fdgp1/L2</Value>
+          <Percentage>/Return/Data/fdgp1/UnifiedTransferTax</Percentage>
+        </InputRoles>
+        <Configuration>
+          <ValueType>Income</ValueType>
+          <OutputType>Percentage</OutputType>
+        </Configuration>
+      </PercentageOf>
+      <PostProcessing>
+        <RoundTo>
+          <Dollars/>
+        </RoundTo>
+        <ZeroIfBlank/>
+      </PostProcessing>
+    </Gist>
+  </Node>
+
+  <Node name="/Return/Data/fdgp1/L6">
+    <Inputs>
+      <Input>/Return/Data/fdgp1/L4</Input>
+      <Input>/Return/Data/fdgp1/L5</Input>
+    </Inputs>
+    <Gist>
+    <Difference>
+      <InputRoles>
+        <Left>/Return/Data/fdgp1/L4</Left>
+        <Right>/Return/Data/fdgp1/L5</Right>
+      </InputRoles>
+    </Difference>
+    </Gist>
+  </Node>
+
+
+  <InputNode name="/Return/Data/fdgp1/UnifiedTransferTax">
+    <PostProcessing>
+      <RoundTo>
+        <Dollars/>
+      </RoundTo>
+    </PostProcessing>
+  </InputNode>
+
+
+  <InputNode name="/Return/Data/fdgp1/L1">
+    <PostProcessing>
+      <RoundTo>
+        <Dollars/>
+      </RoundTo>
+    </PostProcessing>
+  </InputNode>
+
+  <InputNode name="/Return/Data/fdgp1/L2">
+    <PostProcessing>
+      <RoundTo>
+        <Dollars/>
+      </RoundTo>
+    </PostProcessing>
+  </InputNode>
+
+</Nodes>

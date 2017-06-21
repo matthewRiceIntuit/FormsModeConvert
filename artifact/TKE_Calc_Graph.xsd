@@ -1,0 +1,2628 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--- TODO List
+		1. Only tested over ACAPenalty.xml. Serves as a base for future extension. 
+		2. To give the schema a proper ID. 
+		3. To figure out the ultimate place to check the schema file(s) in. 
+		4. Gists are grouped into two set: GenericGistSet and ACASpecificGistSet. 
+		   Consider to separate them into different files. 
+		5. Ordered vs. Unordered: this is particularly significant to the Gist's 
+		   parameter/input pair. Right now, the schema favors <xsd:sequence> and 
+		   manually change some of them to use <xsd:all> when there is evidence that 
+		   the order of element does not matter. Need a systematic decision on this. 
+		6. Other than validating the uniqueness of Node[@name], it does not do other
+		   stringent semantic-like checks. 
+		7. The schema uses "unbounded" whenever there is evidence certain element can appear more than once. 
+		   In other words, there is no specific bound checks in general. 
+		8. Consider redesign the decoration gist such as MultiCopyMapper and BlankIfApplicable 
+		   per discussion between Gang and Dave. 		    
+	-->
+  <xsd:complexType name="VersionsType">
+    <xsd:sequence>
+      <xsd:element name="Version" minOccurs="3" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="id" type="xsd:string"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PostProcessingType">
+    <xsd:sequence>
+      <xsd:element name="RoundTo" type="RoundToType" minOccurs="0"/>
+      <xsd:choice minOccurs="0">
+        <xsd:element name="BlankIfZero">
+          <xsd:complexType/>
+        </xsd:element>
+        <xsd:element name="ZeroIfBlank">
+          <xsd:complexType/>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:group name="RoundToGroup">
+    <xsd:choice>
+      <xsd:element name="Integer">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="Dollars">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="Cents">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="Dec" type="xsd:integer"/>
+      <xsd:element name="Struct">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Element" minOccurs="1" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Name" type="xsd:string"/>
+                  <xsd:element name="RoundTo" type="RoundToType"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:complexType name="RoundToType">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element name="MultiCopy">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:group ref="RoundToGroup"/>
+            <xsd:element name="MultiCopy">
+              <xsd:complexType>
+                <xsd:group ref="RoundToGroup"/>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:group ref="RoundToGroup"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="SimpleNodeType">
+    <xsd:sequence>
+      <xsd:element name="PostProcessing" type="PostProcessingType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:complexType name="CalculatedNodeType">
+    <xsd:sequence>
+      <xsd:element name="Inputs">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Input" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ExtraValuesForFiling" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ExtraValue" minOccurs="1" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="RoundTo" type="RoundToType" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Aliases" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Alias" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyOutputElements" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Element" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BlankCondition" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="BlankIfTrue" type="xsd:string"/>
+            <xsd:element name="BlankIfFalse" type="xsd:string"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Gist" type="GistType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PostProcessing" type="PostProcessingType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  <xsd:group name="NodeGroup">
+    <xsd:choice>
+      <xsd:element name="ConstantNode" type="SimpleNodeType"/>
+      <xsd:element name="InputNode" type="SimpleNodeType"/>
+      <xsd:element name="MultiCopyPrimitiveInputNode" type="SimpleNodeType"/>
+      <xsd:element name="MultiCopyStructInputNode" type="SimpleNodeType"/>
+      <xsd:element name="Node" type="CalculatedNodeType"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:complexType name="GistType">
+    <xsd:choice>
+      <xsd:group ref="GistSet"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:element name="Nodes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Versions" type="VersionsType"/>
+        <xsd:group ref="NodeGroup" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="topic" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:unique name="NodeNameUniqueness">
+      <xsd:annotation>
+        <xsd:documentation>Make sure that all Node[@name] are unique.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:selector xpath="Node"/>
+      <xsd:field xpath="@name"/>
+    </xsd:unique>
+  </xsd:element>
+  <!-- Generic Gist set -->
+  <xsd:group name="GistSet">
+    <xsd:choice>
+      <xsd:element name="BlankIfApplicable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:choice>
+                  <xsd:element name="BlankIfTrue" type="xsd:string"/>
+                  <xsd:element name="BlankIfFalse" type="xsd:string"/>
+                </xsd:choice>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Gist" type="GistType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyMapper">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="List" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="Gist" type="GistType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AboveOrEqualToThreshold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AboveThreshold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AbsoluteValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ShouldSkipToInput" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACA1095AAllocation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Values" type="xsd:string"/>
+                  <xsd:element name="Allocations" type="xsd:string"/>
+                  <xsd:element name="PolicyNumbers" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ValueName" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAAdditionalTaxLimitationAmt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="PovertyLevelPct" type="xsd:string"/>
+                  <xsd:element name="AdditionalTaxLimitationTable" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAAllMonthsHaveStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MonthlyStatuses" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="WhatIsBeingChecked" type="xsd:string"/>
+                  <xsd:element name="AcceptableStatuses">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Status" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAAltFamilySize">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ThisPersonHasPolicies" type="xsd:string"/>
+                  <xsd:element name="OtherPersonHasPolicies" type="xsd:string"/>
+                  <xsd:element name="NumberDependents" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="RoundUp" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="ThisPersonID" type="xsd:string"/>
+                  <xsd:element name="OtherPersonID" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAAltPTC">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AltPrimaryPTC" type="xsd:string"/>
+                  <xsd:element name="AltSpousePTC" type="xsd:string"/>
+                  <xsd:element name="StandardPTC" type="xsd:string"/>
+                  <xsd:element name="PrimaryEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="SpouseEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACABenchmarkPlan">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ZipCode" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACABronzePlan">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="MaxBronzePlanAmt" type="xsd:string"/>
+                  <xsd:element name="PersonCountThreshold" type="xsd:string"/>
+                  <xsd:element name="BronzePlanPerPersonAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACABronzePlanCount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="MaxPeoplePerMonth" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAChooseCalculationType">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PrimaryAltFamilySize" type="xsd:string"/>
+                  <xsd:element name="Monthly1095AData" type="xsd:string"/>
+                  <xsd:element name="MonthlyOfferOfCoverageData" type="xsd:string"/>
+                  <xsd:element name="AllocationPolicyNumbers" type="xsd:string"/>
+                  <xsd:element name="MonthlyTrueUp" type="xsd:string"/>
+                  <xsd:element name="AltTrueUp" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ExtraDataForFilingRoles" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SharePolicyMarriedAltCalcIndID" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="Form1095ASameMonthlyAmtIndID" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACoverageCollector">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PrimarySSN" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="PrimaryDeathDt" type="xsd:string"/>
+                  <xsd:element name="SpouseSSN" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseDeathDt" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="DependentDetail" type="xsd:string"/>
+                  <xsd:element name="EntireFamilyCoveredAllYear" type="xsd:string"/>
+                  <xsd:element name="CoverageFrom1095A" type="xsd:string"/>
+                  <xsd:element name="CoverageFrom1095B" type="xsd:string"/>
+                  <xsd:element name="CoverageFrom1095C" type="xsd:string"/>
+                  <xsd:element name="CoverageFrom1095Other" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="RequestedExemptions" type="xsd:string"/>
+                  <xsd:element name="ObtainedExemptionsWithStartAndEndMonths" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateCoverageTable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="PrimaryFirstNm" type="xsd:string"/>
+                  <xsd:element name="SpouseFirstNm" type="xsd:string"/>
+                  <xsd:element name="DependentDetail" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MultiCopyOutputMappings" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PersonName" type="xsd:string"/>
+                  <xsd:element name="MonthGroup" type="xsd:string"/>
+                  <xsd:element name="MonthCode" type="xsd:string"/>
+                  <xsd:element name="Status" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateCoverageTableElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateCoverageTableRow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateHealthCareCoverageAndExemptionTable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="PrimarySSN" type="xsd:string"/>
+                  <xsd:element name="PrimaryFirstNm" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseSSN" type="xsd:string"/>
+                  <xsd:element name="SpouseFirstNm" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="DependentDetail" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MultiCopyOutputMappings" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PersonFirstNamePP" type="xsd:string"/>
+                  <xsd:element name="PersonSSNPP" type="xsd:string"/>
+                  <xsd:element name="PersonIdPP" type="xsd:string"/>
+                  <xsd:element name="MonthlyStatusGrpPP" type="xsd:string"/>
+                  <xsd:element name="MonthCdPP" type="xsd:string"/>
+                  <xsd:element name="StatusPP" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateHealthCareCoverageAndExemptionTableElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateHealthCareCoverageAndExemptionTableRow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACACreateMonthlyPTCCalculationGrp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumSLCSPAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryMonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryStartMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltSpouseMonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltSpouseStartMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltSpouseEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumTaxCreditAllwAmt" type="xsd:string"/>
+                  <xsd:element name="AltMonthlyPremiumTaxCreditAllwAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyAdvancedPTCAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MultiCopyOutputMappings" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MonthCd" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumSLCSPAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyContributionAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyMaxPremiumAssistanceAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumTaxCreditAllwAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyAdvancedPTCAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACADeficitInCoverage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACADeficitInCoveragePerPersonPerMonth">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ThisPersonThisMonth" type="xsd:string"/>
+                  <xsd:element name="AllData" type="xsd:string"/>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="AutoGLimitedCoverageData" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="AutoGExemptionMode" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="EligibleForMedicaidGapExemption" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AutoGAcceptableCoverageGapLastPossibleMonth" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACADisqualifiedFromPTCDueToFilingStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="ReliefInd" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAExemptDueToDependentOnOtherReturn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="TotalExemptionsCount" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAExemptionRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="UserRequests" type="xsd:string"/>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="PrimarySSN" type="xsd:string"/>
+                  <xsd:element name="PrimaryFirstNm" type="xsd:string"/>
+                  <xsd:element name="PrimaryLastNm" type="xsd:string"/>
+                  <xsd:element name="SpouseSSN" type="xsd:string"/>
+                  <xsd:element name="SpouseFirstNm" type="xsd:string"/>
+                  <xsd:element name="SpouseLastNm" type="xsd:string"/>
+                  <xsd:element name="DependentDetail" type="xsd:string"/>
+                  <xsd:element name="MedicaidGapData" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MultiCopyOutputMappings" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SortIdPP" type="xsd:string"/>
+                  <xsd:element name="PersonNm" type="xsd:string"/>
+                  <xsd:element name="SSN" type="xsd:string"/>
+                  <xsd:element name="ExemptionReasonCd" type="xsd:string"/>
+                  <xsd:element name="AllYearInd" type="xsd:string"/>
+                  <xsd:element name="JanuaryInd" type="xsd:string"/>
+                  <xsd:element name="FebruaryInd" type="xsd:string"/>
+                  <xsd:element name="MarchInd" type="xsd:string"/>
+                  <xsd:element name="AprilInd" type="xsd:string"/>
+                  <xsd:element name="MayInd" type="xsd:string"/>
+                  <xsd:element name="JuneInd" type="xsd:string"/>
+                  <xsd:element name="JulyInd" type="xsd:string"/>
+                  <xsd:element name="AugustInd" type="xsd:string"/>
+                  <xsd:element name="SeptemberInd" type="xsd:string"/>
+                  <xsd:element name="OctoberInd" type="xsd:string"/>
+                  <xsd:element name="NovemberInd" type="xsd:string"/>
+                  <xsd:element name="DecemberInd" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAFilter1095AMonthlyValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Data" type="xsd:string"/>
+                  <xsd:element name="SSNFilter" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="StartMonthNumberCdFilter" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="EndMonthNumberCdFilter" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ValueName" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAFilter1095COfferOfCoverage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Data" type="xsd:string"/>
+                  <xsd:element name="SSNFilter" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="StartMonthNumberCdFilter" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="EndMonthNumberCdFilter" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAFindPercentageOfPovertyLevel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="HouseholdIncome" type="xsd:string"/>
+                  <xsd:element name="PovertyLevelAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAFlatDollarAmount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="FlatDollarPerPersonAmt" type="xsd:string"/>
+                  <xsd:element name="MaxFlatDollarAmt" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="DependentsBirthDts" type="xsd:string"/>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAFlatDollarCount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="DependentsBirthDts" type="xsd:string"/>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="CountType" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAIncomeFlatDollarPenalty">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MonthlyPenalty" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ExtraDataForFilingRoles" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PenaltyX12" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAMonthlyPTCContributionForChoiceGrp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyPremiumSLCSPAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryMonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryStartMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltPrimaryEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltSpouseMonthlyContribAmt" type="xsd:string"/>
+                  <xsd:element name="AltSpouseStartMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="AltSpouseEndMonthNumberCd" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAOfferOfCoverage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="CoverageCodes" type="xsd:string"/>
+                  <xsd:element name="PrimarySSN" type="xsd:string"/>
+                  <xsd:element name="SpouseSSN" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="CoverageOfferedCdName" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAPenaltyIfAnyUninsured">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PenaltyAmt" type="xsd:string"/>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAPenaltyMustBeAtLeast">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FlatDollarMinimum" type="xsd:string"/>
+                  <xsd:element name="IncomePenalty" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAPTCTrueUp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PTCReceived" type="xsd:string"/>
+                  <xsd:element name="PTCEligible" type="xsd:string"/>
+                  <xsd:element name="CalculationType" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="LeaveBlankIfNegative" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACARequiredContribution">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="HouseholdIncome" type="xsd:string"/>
+                  <xsd:element name="PovertyLevelPct" type="xsd:string"/>
+                  <xsd:element name="FPLTable" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="FPLDecimalTable" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ExtraDataForFilingRoles" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ApplicableFigureRt" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACASelfEmployedExchangeInsuranceDeduction">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ScheduleCProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleFProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleK1SProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleK1PProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="DataFrom1095A" type="xsd:string"/>
+                  <xsd:element name="MonthlyPlanPremiumAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyAdvancedPTCAmt" type="xsd:string"/>
+                  <xsd:element name="PovertyLevel" type="xsd:string"/>
+                  <xsd:element name="AdjustedGrossIncomeWithoutExchangeSEDeductionAmt" type="xsd:string"/>
+                  <xsd:element name="AdditionalTaxLimitationTable" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="TotalPremiumByMonth" type="xsd:string"/>
+                  <xsd:element name="MaxIterations" type="xsd:string"/>
+                  <xsd:element name="MonthlyPTC" type="xsd:string"/>
+                  <xsd:element name="TotalPTC" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACASelfEmployedExchangeInsuranceDeductionViaTPSCycle">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ScheduleCProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleFProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleK1SProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="ScheduleK1PProfitIncludingStandardHealthDeduction" type="xsd:string"/>
+                  <xsd:element name="DataFrom1095A" type="xsd:string"/>
+                  <xsd:element name="MonthlyPlanPremiumAmt" type="xsd:string"/>
+                  <xsd:element name="MonthlyAdvancedPTCAmt" type="xsd:string"/>
+                  <xsd:element name="PovertyLevel" type="xsd:string"/>
+                  <xsd:element name="AdjustedGrossIncomeAmt" type="xsd:string"/>
+                  <xsd:element name="AdditionalTaxLimitationTable" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="TotalPremiumByMonth" type="xsd:string"/>
+                  <xsd:element name="MaxIterations" type="xsd:string"/>
+                  <xsd:element name="MonthlyPTC" type="xsd:string"/>
+                  <xsd:element name="TotalPTC" type="xsd:string"/>
+                  <xsd:element name="PTCThreshold" type="xsd:string"/>
+                  <xsd:element name="DeductionThreshold" type="xsd:string"/>
+                  <xsd:element name="ExchangeSelfEmploymentDeduction" type="xsd:string"/>
+                  <xsd:element name="TPSIterationNumber" type="xsd:string"/>
+                  <xsd:element name="IterationNumber" type="xsd:string"/>
+                  <xsd:element name="LastIterationDeduction" type="xsd:string"/>
+                  <xsd:element name="LastIterationPTC" type="xsd:string"/>
+                  <xsd:element name="AlternateDeduction" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ExtraDataForFilingRoles" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NextIterationSetDeductionBlank" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="NextIterationNumber" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="NextExchangeSelfEmploymentDeduction" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="NextLastIterationDeduction" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="NextLastIterationPTC" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="NextAlternateDeduction" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACATotalBronzePlan">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PersonCount" type="xsd:string"/>
+                  <xsd:element name="BronzePlanPerPersonAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ACAUncappedFlatDollarAmount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DeficitData" type="xsd:string"/>
+                  <xsd:element name="ChildAmt" type="xsd:string"/>
+                  <xsd:element name="AdultAmt" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="DependentsBirthDts" type="xsd:string"/>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="Month" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Accumulation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                  <xsd:element name="SkipToInputIfOnlyOneSet" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AccumulationOfPositiveValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AccumulationWithFilter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AllConditionsTrue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Condition" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                  <xsd:element name="OppositeCondition" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AtLeastOneConditionTrue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Condition" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                  <xsd:element name="OppositeCondition" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SkipToInputIfOnlyOneTrue" minOccurs="0" type="xsd:boolean"/>
+                  <xsd:element name="SkipToInputIfAllAreTrue" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BelowThreshold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BooleanChoice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="Possibility" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ChoiceMapping">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Option" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Value" type="xsd:string"/>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="DefaultOption" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="BooleanCopy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Cap">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Cap" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ValueType" type="xsd:string"/>
+                  <xsd:element name="SkipExplanationWhenCapNotUsed" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangeStringToAllCaps">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="StringToConvert" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateChoice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="Possibility" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ChoiceMapping">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Option" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Value" type="xsd:string"/>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="DefaultOption" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateCopy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateIsAfter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Date" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateIsBefore">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Date" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateParse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="InputFormat" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateToMonthNumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Date" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ShouldSkipToInput" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DateToYearlyQuarter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Date" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DeficitInInsuranceCoverage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="CoverageIndPP" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Difference">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Left" type="xsd:string"/>
+                  <xsd:element name="Right" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SkipToLeftIfRightIsBlank" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DisqualifiedDueToAge">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDate" type="xsd:string"/>
+                  <xsd:element name="PrimaryDeathDate" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDate" type="xsd:string"/>
+                  <xsd:element name="SpouseDeathDate" type="xsd:string"/>
+                  <xsd:element name="MinimumAge" type="xsd:string"/>
+                  <xsd:element name="MaximumAge" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DisqualifiedDueToAtLeastOneReason">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Reason" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="DisqualifiedFromWhat" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DisqualifiedDueToIncome">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SubsidyType" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DisqualifiedFromEITCDueToIncome">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="NumberQualifyingChildren" type="xsd:string"/>
+                  <xsd:element name="MaxAGITable" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EarnedIncomeTaxCredit">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="NumberQualifyingChildren" type="xsd:string"/>
+                  <xsd:element name="Table" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EICTotalGrossReceiptsAccumulation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ScheduleC" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MultiCopyOutputMappings" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Taxpayer" type="xsd:string"/>
+                  <xsd:element name="Spouse" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EligibleDueToLowIncome">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="EligibleForWhat" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Equals">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ExcessAmt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ValueType" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ExemptDueToAtLeastOneReason">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Reason" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ExemptFromWhat" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ExemptDueToLowIncome">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="Threshold" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ExemptFromWhat" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FilingThreshold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="PrimaryBirthDt" type="xsd:string"/>
+                  <xsd:element name="SpouseBirthDt" type="xsd:string"/>
+                  <xsd:element name="AgeLimit" type="xsd:string"/>
+                  <xsd:element name="FilingYear" type="xsd:string"/>
+                  <xsd:element name="SingleStandardDeduction" type="xsd:string"/>
+                  <xsd:element name="SingleExemption" type="xsd:string"/>
+                  <xsd:element name="SingleReachedAgeLimitAmt" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingJointlyStandardDeduction" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingJointlyExemption" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingJointlyReachedAgeLimitAmt" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingSeparatelyStandardDeduction" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingSeparatelyExemption" type="xsd:string"/>
+                  <xsd:element name="MarriedFilingSeparatelyReachedAgeLimitAmt" type="xsd:string"/>
+                  <xsd:element name="HeadOfHouseholdStandardDeduction" type="xsd:string"/>
+                  <xsd:element name="HeadOfHouseholdExemption" type="xsd:string"/>
+                  <xsd:element name="HeadOfHouseholdReachedAgeLimitAmt" type="xsd:string"/>
+                  <xsd:element name="WidowerStandardDeduction" type="xsd:string"/>
+                  <xsd:element name="WidowerExemption" type="xsd:string"/>
+                  <xsd:element name="WidowerReachedAgeLimitAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindDaysUsedInMonthOfQuarter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MonthOfQuarter" type="xsd:string"/>
+                  <xsd:element name="Dates" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindIDForMaxValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Values" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindIDForMinValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Values" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindMonthsOfQuarterUsed">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Dates" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindPercentage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Whole" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsBlank">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsNotBlank">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Maximum">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MergeStringLists">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="StringList" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Minimum">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ModAGI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AGI" type="xsd:string"/>
+                  <xsd:element name="ItemToAdd" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                  <xsd:element name="ItemToRemove" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyAccumulation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyAccumulationOfPositiveValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyAllConditionsTrue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyAtLeastOneConditionTrue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyChoice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="Possibility" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ChoiceMapping">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Option" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Value" type="xsd:string"/>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="DefaultOption" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCombiner">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopyValue" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Elements">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Element" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="Name" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCombinerElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCombinerRow">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NotUsed" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCopy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyCreateFromCSV">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Data" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="UseStringAsKey" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyFilter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ValuesAndConditions" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyFindAllIDsForValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyFindIDForValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyHasSpecificValue">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyHasValues">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopyValue" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopyRemoveDuplicates">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopyValue" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopySelectBooleanByID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="Default" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopySelectDateByID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="Default" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopySelectMultiCopyByID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="Default" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopySelectNumericByID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="Default" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MultiCopySelectStringByID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MultiCopy" type="xsd:string"/>
+                  <xsd:element name="ID" type="xsd:string"/>
+                  <xsd:element name="Default" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NotEquals">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NumericChoice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="Possibility" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ChoiceMapping">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Option" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Value" type="xsd:string"/>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="DefaultOption" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NumericCopy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NumericCopyIfApplicable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="ApplicableCondition" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="NonApplicableCondition" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SkipToIfCopied" minOccurs="0" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Opposite">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PayrollTotalLiabilityPerDay">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="MonthOfQuarter" type="xsd:string"/>
+                  <xsd:element name="DaysInUse" type="xsd:string"/>
+                  <xsd:element name="FederalTotalDates" type="xsd:string"/>
+                  <xsd:element name="SocialSecurityLiability" type="xsd:string"/>
+                  <xsd:element name="MedicareLiability" type="xsd:string"/>
+                  <xsd:element name="FederalWitholding" type="xsd:string"/>
+                  <xsd:element name="EarnedIncomeCredit" type="xsd:string"/>
+                  <xsd:element name="TaxItemTotalDates" type="xsd:string"/>
+                  <xsd:element name="TaxItemTotalTaxAmount" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PenaltyIfApplicable">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="PenaltyApplies" type="xsd:string"/>
+                  <xsd:element name="IsExempt" type="xsd:string"/>
+                  <xsd:element name="PenaltyAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PercentageOf">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Percentage" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ValueType" type="xsd:string"/>
+                  <xsd:element name="OutputType" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PovertyLevel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="StateAbbreviationCd" type="xsd:string"/>
+                  <xsd:element name="FamilySize" type="xsd:string"/>
+                  <xsd:element name="AlaskaFirstPerson" type="xsd:string"/>
+                  <xsd:element name="AlaskaIncrement" type="xsd:string"/>
+                  <xsd:element name="HawaiiFirstPerson" type="xsd:string"/>
+                  <xsd:element name="HawaiiIncrement" type="xsd:string"/>
+                  <xsd:element name="MainFirstPerson" type="xsd:string"/>
+                  <xsd:element name="MainIncrement" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ExtraDataForFilingRoles" minOccurs="0">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="LocationCodeID" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="TotalExemptionsCntID" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Product">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Product" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Quotient">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Numerator" type="xsd:string"/>
+                  <xsd:element name="Denominator" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StringCapturesPattern">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Pattern" type="xsd:string"/>
+                  <xsd:element name="ConcatResults" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StringChoice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Choice" type="xsd:string"/>
+                  <xsd:element name="Possibility" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ChoiceMapping">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Option" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Value" type="xsd:string"/>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="DefaultOption" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="ID" type="xsd:string"/>
+                              <xsd:element name="NoOtherOption" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StringConcat">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="First" type="xsd:string"/>
+                  <xsd:element name="Second" type="xsd:string"/>
+                  <xsd:element name="Third" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Fourth" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="Delimiter" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StringCopy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="StringMatchesPattern">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="Pattern" maxOccurs="unbounded" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Subsidy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Cost" type="xsd:string"/>
+                  <xsd:element name="RequiredPayment" type="xsd:string"/>
+                  <xsd:element name="Disqualified" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SubsidyRefund">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="TrueUpAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SubsidyRepayment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="TrueUpAmt" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SubsidyTrueUp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SubsidyReceived" type="xsd:string"/>
+                  <xsd:element name="SubsidyEligible" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TaxableIncome">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Income" type="xsd:string"/>
+                  <xsd:element name="Deductions" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValueMustBeBetween">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Value" type="xsd:string"/>
+                  <xsd:element name="MinimumValue" type="xsd:string"/>
+                  <xsd:element name="MaximumValue" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Configuration">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ValuePerFamilyMember">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="InputRoles">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FilingStatus" type="xsd:string"/>
+                  <xsd:element name="PrimaryValue" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="SpouseValue" minOccurs="0" type="xsd:string"/>
+                  <xsd:element name="DependentValues" minOccurs="0" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+</xsd:schema>
